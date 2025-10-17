@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #1e3a8a; /* blue-800 */
+    --color2: #10b981; /* emerald-500 */
+    --color3: #f59e0b; /* amber-500 */
+    --color4: #ef4444; /* red-500 */
+    --color5: #7c3aed; /* violet-600 */
+}
+
+body {
+    background-color: #111827; /* Fallback */
+    background: linear-gradient(180deg, #0f172a 0%, #312e81 100%); /* De azul pizarra oscuro a índigo oscuro */
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 24 39 / var(--tw-bg-opacity)); /* bg-gray-900 */
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #0891b2 0%, #2563eb 100%); /* De cian a azul */
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+    will-change: transform, box-shadow;
+}
+
+.card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.dark-card-hover {
+    transition: all 0.3s ease;
+    will-change: transform, box-shadow;
+}
+
+.dark-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.collapse-content.active {
+    max-height: 500px;
+}
+
+.rotate-icon {
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+
+.rotate-icon.active {
+    transform: rotate(180deg);
+}
+
+/* Animaciones para certificaciones */
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+        transform: translate3d(0,0,0);
+    }
+    40%, 43% {
+        transform: translate3d(0, -30px, 0);
+    }
+    70% {
+        transform: translate3d(0, -15px, 0);
+    }
+    90% {
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+.animate-spin {
+    animation: spin 2s linear infinite;
+}
+
+/* Efectos hover para certificaciones */
+.certification-card {
+    transition: all 0.5s ease;
+    will-change: transform, box-shadow;
+}
+
+.certification-card:hover {
+    transform: translateY(-8px) rotate(1deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.certification-featured {
+    transition: all 0.5s ease;
+    will-change: transform, box-shadow;
+}
+
+.certification-featured:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+/* Gradientes personalizados */
+.bg-gradient-rainbow {
+    background: linear-gradient(135deg, var(--color1) 0%, var(--color2) 25%, var(--color3) 50%, var(--color4) 75%, var(--color5) 100%);
+}
+
+.text-gradient-rainbow {
+    background: linear-gradient(135deg, var(--color1) 0%, var(--color2) 25%, var(--color3) 50%, var(--color4) 75%, var(--color5) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .certification-card:hover {
+        transform: translateY(-4px);
+    }
+    
+    .certification-featured:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+    
+    .animate-bounce {
+        animation: none;
+    }
+    
+    .animate-spin {
+        animation: none;
+    }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1f2937;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--color1) 0%, var(--color3) 100%);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--color1) 0%, var(--color5) 100%);
+}
+
+/* Mejoras de accesibilidad */
+.nav-btn:focus {
+    outline: 2px solid var(--color1);
+    outline-offset: 2px;
+}
+
+/* Mejoras visuales */
+.section-content {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.section-content.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+/* Animación para animateOnScroll */
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fondo para las secciones principales */
+.section-bg {
+    background-color: rgba(255, 255, 255, 0.315); /* Fondo blanco con 30% de opacidad */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgb(255, 255, 255); /* Borde blanco semitransparente */
+    color: white; /* Color de texto por defecto para mejorar contraste */
+}
+
+.gradient-bg-hover {
+    background: linear-gradient(135deg, var(--color1) 0%, var(--color5) 100%);
+    transition: all 0.3s ease;
+}
+
+.gradient-bg-hover:hover {
+    background: linear-gradient(135deg, var(--color5) 0%, var(--color1) 100%);
+}
+
+/* Estilos extraídos de index.html para una mejor organización */
+
+/* Barra de progreso para el curso de Estadística Computacional */
+.progress-est-comp {
+    width: 88%;
+}
+
+/* Barra de progreso para cursos bloqueados/próximos */
+.progress-locked {
+    width: 0%;
+}
+
+/* Encabezado para la página de detalle del curso */
+.course-detail-header {
+    background: linear-gradient(135deg, #0891b2 0%, #2563eb 100%); /* Mismo estilo que .gradient-bg */
+}
+
+/* Forzar texto blanco en la sección de perfil */
+.profile-text-white * {
+    color: white !important;
+}

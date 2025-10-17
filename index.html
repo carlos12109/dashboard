@@ -1,0 +1,2670 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Estudiante - UNA Puno</title>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.78/build/spline-viewer.js"></script>
+    <link rel="stylesheet" href="style.css"> <!-- Corregido: Enlace a CSS añadido -->
+</head>
+
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <img src="LOGO_UNAP.png" alt="Logo UNA Puno" class="w-14 h-14 object-contain">
+                    <div>
+                        <h1 class="text-2xl font-bold">Mi Dashboard</h1>
+                        <p class="text-blue-100 text-sm">Universidad Nacional del Altiplano - PUNO</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Menu (ahora dentro del header) -->
+            <nav class="flex flex-wrap justify-center gap-2 md:gap-4 pt-4 mt-4 border-t border-white border-opacity-20">
+                <button data-section="inicio"
+                    class="nav-btn px-6 py-3 rounded-xl transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                    🏠 Inicio
+                </button>
+                <button data-section="perfil"
+                    class="nav-btn px-6 py-3 rounded-xl transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                    👤 Perfil
+                </button>
+                <button data-section="cursos"
+                    class="nav-btn px-6 py-3 rounded-xl transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                    📚 Cursos
+                </button>
+                <button data-section="deportes"
+                    class="nav-btn px-6 py-3 rounded-xl transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                    🏆 Deportes
+                </button>
+                <button data-section="certificaciones"
+                    class="nav-btn px-6 py-3 rounded-xl transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                    🎓 Certificaciones
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Spline Viewer Section -->
+        <section id="spline-viewer-section" class="section-content">
+            <div class="w-full h-80 md:h-[500px] mb-8 rounded-xl overflow-hidden shadow-xl">
+                <spline-viewer url="https://prod.spline.design/k3HNbctLUjTreSeu/scene.splinecode"></spline-viewer>
+            </div>
+        </section>
+
+        <!-- Perfil Section -->
+        <section id="perfil" class="section-content">
+            <div class="section-bg rounded-xl shadow-xl p-8 mb-8 card-hover text-white">
+                <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+                    <!-- Foto de perfil con imagen -->
+                    <div class="flex-shrink-0">
+                        <img src="vidman.JPG" alt="Foto de Vidman Roque"
+                            class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg border-4 border-white transition-all duration-300 ease-in-out transform hover:scale-105">
+
+                    </div>
+
+                    <!-- Información personal -->
+                    <div class="flex-1 text-center md:text-left">
+                        <h2 class="text-3xl font-bold text-white mb-2">Vidman Ruis Roque Mamani</h2>
+                        <p class="text-xl text-blue-300 mb-4">Estudiante de Ingeniería Estadística e Informática</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-800/50 p-4 rounded-lg">
+                                <h3 class="font-semibold">📧 Email</h3>
+                                <p>75580218@unap.edu.pe</p>
+                            </div>
+                            <div class="bg-gray-800/50 p-4 rounded-lg">
+                                <h3 class="font-semibold">🆔 Código</h3>
+                                <p>236232</p>
+                            </div>
+                            <div class="bg-gray-800/50 p-4 rounded-lg">
+                                <h3 class="font-semibold">📅 Semestre</h3>
+                                <p>V Semestre</p>
+                            </div>
+                            <div class="bg-gray-800/50 p-4 rounded-lg">
+                                <h3 class="font-semibold">📍 Procedencia</h3>
+                                <p>Pomata, Puno, Perú</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-900/20 p-6 rounded-lg">
+                            <h3 class="font-semibold text-white mb-3">Mi Historia</h3>
+                            <p class="leading-relaxed">
+                                Soy un estudiante apasionado por la tecnología y los datos, originario de la hermosa
+                                ciudad de Pomata.
+                                Desde pequeño me fascinó el mundo de las computadoras y las matemáticas. Actualmente
+                                curso el quinto
+                                semestre en la Escuela Profesional de Ingeniería Estadística e Informática de la UNA
+                                Puno.
+                                Mi objetivo es convertirme en un profesional que contribuya al desarrollo tecnológico de
+                                mi región,
+                                aplicando la ciencia de datos para resolver problemas reales de nuestra sociedad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cursos Actuales Section -->
+        <section id="cursos" class="section-content">
+            <div class="section-bg rounded-xl shadow-xl p-8 mb-8 text-white">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-white mb-2">📚 Mis Cursos del Semestre</h2>
+                    <p>V Semestre - Ingeniería Estadística e Informática</p>
+                </div>
+
+                <!-- Curso Principal Destacado -->
+                <div class="mb-8">
+                    <div class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1 rounded-2xl shadow-xl">
+                        <div class="bg-gray-900 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center space-x-4">
+                                    <div
+                                        class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                                        <span class="text-white text-2xl">📊</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-white">Estadística Computacional</h3>
+                                        <div class="flex items-center space-x-4 text-sm mt-1">
+                                            <span>👨‍🏫 Dr. Edgardo Yapo Quispe</span>
+                                            <span>⏰ 6 hrs/semana</span>
+                                            <span>📅 Mar-Jue-Vie</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div
+                                        class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                                        88%</div>
+                                    <div class="text-sm">Subido</div>
+                                    <div class="mt-2">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2">
+                                            <div
+                                                class="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full progress-est-comp">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                                <div class="bg-green-900/30 p-4 rounded-xl border border-green-700">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <p class="font-semibold">Examen Parcial</p>
+                                            <p class="text-2xl font-bold">85%</p>
+                                        </div>
+                                        <div class="text-green-500 text-2xl">✅</div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-blue-900/30 p-4 rounded-xl border border-blue-700">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <p class="font-semibold">Prácticas Laboratorio</p>
+                                            <p class="text-2xl font-bold">92%</p>
+                                        </div>
+                                        <div class="text-blue-500 text-2xl">💻</div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-yellow-900/30 p-4 rounded-xl border border-yellow-700">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <p class="font-semibold">Proyecto Final</p>
+                                            <p class="text-sm font-bold">Pendiente</p>
+                                        </div>
+                                        <div class="text-yellow-500 text-2xl">⏳</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button id="goToCourseDetailBtn"
+                                class="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                                <span>🚀 Explorar Curso Completo</span>
+                                <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grid de Cursos Organizados -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Lenguaje de Programación 3 - BLOQUEADO -->
+                    <div
+                        class="bg-gray-800 rounded-xl border-2 border-gray-700 overflow-hidden shadow-lg opacity-60 relative">
+                        <div class="absolute inset-0 bg-gray-900 bg-opacity-20 flex items-center justify-center z-10">
+                            <div class="bg-white rounded-full p-3 shadow-lg">
+                                <span class="text-2xl">🔒</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-500 rounded-xl flex items-center justify-center">
+                                    <span class="text-white text-xl">💻</span>
+                                </div>
+                                <div class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                    🔒 Próximamente
+                                </div>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-white mb-2">Lenguaje de Programación 3</h3>
+                            <p class="text-sm mb-3">POO y estructuras de datos avanzadas</p>
+
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-2xl font-bold">--</span>
+                                <div class="text-xs">
+                                    <p>👨‍🏫 Ing. Martinez</p>
+                                    <p>📅 VI Semestre</p>
+                                </div>
+                            </div>
+
+                            <div class="w-full bg-gray-300 rounded-full h-2 mb-4">
+                                <div class="bg-gray-400 h-2 rounded-full progress-locked"></div>
+                            </div>
+
+                            <button disabled
+                                class="w-full bg-gray-400 text-gray-600 py-2 px-4 rounded-lg font-medium cursor-not-allowed">
+                                Próximamente Habilitado
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Base de Datos 2 - BLOQUEADO -->
+                    <div
+                        class="bg-gray-800 rounded-xl border-2 border-gray-700 overflow-hidden shadow-lg opacity-60 relative">
+                        <div class="absolute inset-0 bg-gray-900 bg-opacity-20 flex items-center justify-center z-10">
+                            <div class="bg-white rounded-full p-3 shadow-lg">
+                                <span class="text-2xl">🔒</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-500 rounded-xl flex items-center justify-center">
+                                    <span class="text-white text-xl">🗄️</span>
+                                </div>
+                                <div class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                    🔒 Próximamente
+                                </div>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-white mb-2">Base de Datos 2</h3>
+                            <p class="text-sm mb-3">Administración y optimización de BD</p>
+
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-2xl font-bold">--</span>
+                                <div class="text-xs">
+                                    <p>👩‍🏫 Dra. Beto </p>
+                                    <p>📅 VI Semestre</p>
+                                </div>
+                            </div>
+
+                            <div class="w-full bg-gray-300 rounded-full h-2 mb-4">
+                                <div class="bg-gray-400 h-2 rounded-full progress-locked"></div>
+                            </div>
+
+                            <button disabled
+                                class="w-full bg-gray-400 text-gray-600 py-2 px-4 rounded-lg font-medium cursor-not-allowed">
+                                Próximamente Habilitado
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Estadística No Paramétrica - BLOQUEADO -->
+                    <div
+                        class="bg-gray-800 rounded-xl border-2 border-gray-700 overflow-hidden shadow-lg opacity-60 relative">
+                        <div class="absolute inset-0 bg-gray-900 bg-opacity-20 flex items-center justify-center z-10">
+                            <div class="bg-white rounded-full p-3 shadow-lg">
+                                <span class="text-2xl">🔒</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-500 rounded-xl flex items-center justify-center">
+                                    <span class="text-white text-xl">📈</span>
+                                </div>
+                                <div class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                    🔒 Próximamente
+                                </div>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-white mb-2">Estadística No Paramétrica</h3>
+                            <p class="text-sm mb-3">Métodos estadísticos sin supuestos de distribución</p>
+
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-2xl font-bold">--</span>
+                                <div class="text-xs">
+                                    <p>👩‍🏫 Dra. Quispe</p>
+                                    <p>📅 VI Semestre</p>
+                                </div>
+                            </div>
+
+                            <div class="w-full bg-gray-300 rounded-full h-2 mb-4">
+                                <div class="bg-gray-400 h-2 rounded-full progress-locked"></div>
+                            </div>
+
+                            <button disabled
+                                class="w-full bg-gray-400 text-gray-600 py-2 px-4 rounded-lg font-medium cursor-not-allowed">
+                                Próximamente Habilitado
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Metodología de Optimización - BLOQUEADO -->
+                    <div
+                        class="bg-gray-800 rounded-xl border-2 border-gray-700 overflow-hidden shadow-lg opacity-60 relative">
+                        <div class="absolute inset-0 bg-gray-900 bg-opacity-20 flex items-center justify-center z-10">
+                            <div class="bg-white rounded-full p-3 shadow-lg">
+                                <span class="text-2xl">🔒</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-500 rounded-xl flex items-center justify-center">
+                                    <span class="text-white text-xl">⚙️</span>
+                                </div>
+                                <div class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                    🔒 Próximamente
+                                </div>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-white mb-2">Metodología de Optimización</h3>
+                            <p class="text-sm mb-3">Algoritmos para encontrar soluciones óptimas</p>
+
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-2xl font-bold">--</span>
+                                <div class="text-xs">
+                                    <p>👨‍🏫 Dr. Yapo</p>
+                                    <p>📅 VI Semestre</p>
+                                </div>
+                            </div>
+
+                            <div class="w-full bg-gray-300 rounded-full h-2 mb-4">
+                                <div class="bg-gray-400 h-2 rounded-full progress-locked"></div>
+                            </div>
+
+                            <button disabled
+                                class="w-full bg-gray-400 text-gray-600 py-2 px-4 rounded-lg font-medium cursor-not-allowed">
+                                Próximamente Habilitado
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Arquitectura de Computadoras - BLOQUEADO -->
+                    <div
+                        class="bg-gray-800 rounded-xl border-2 border-gray-700 overflow-hidden shadow-lg opacity-60 relative">
+                        <div class="absolute inset-0 bg-gray-900 bg-opacity-20 flex items-center justify-center z-10">
+                            <div class="bg-white rounded-full p-3 shadow-lg">
+                                <span class="text-2xl">🔒</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-500 rounded-xl flex items-center justify-center">
+                                    <span class="text-white text-xl">🖥️</span>
+                                </div>
+                                <div class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                    🔒 Próximamente
+                                </div>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-white mb-2">Arquitectura de Computadoras</h3>
+                            <p class="text-sm mb-3">Estructura y funcionamiento del hardware</p>
+
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-2xl font-bold">--</span>
+                                <div class="text-xs">
+                                    <p>👨‍🏫 Ing. Flores</p>
+                                    <p>📅 VI Semestre</p>
+                                </div>
+                            </div>
+
+                            <div class="w-full bg-gray-300 rounded-full h-2 mb-4">
+                                <div class="bg-gray-400 h-2 rounded-full progress-locked"></div>
+                            </div>
+
+                            <button disabled
+                                class="w-full bg-gray-400 text-gray-600 py-2 px-4 rounded-lg font-medium cursor-not-allowed">
+                                Próximamente Habilitado
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Resumen de Rendimiento -->
+                    <div class="bg-gray-800 rounded-xl border-2 border-gray-700 overflow-hidden shadow-lg">
+                        <div class="p-6 text-center">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white text-xl">📊</span>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-white mb-2">Resumen General</h3>
+                            <p class="text-sm mb-4">Tu rendimiento este semestre</p>
+
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm">Promedio General:</span>
+                                    <span class="font-bold text-white">87%</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm">Cursos Aprobados:</span>
+                                    <span class="font-bold text-green-600">5/5</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm">Mejor Curso:</span>
+                                    <span class="font-bold text-pink-600">Est. Comp.</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 p-3 bg-green-50 rounded-lg border border-green-200">
+                                <p class="text-green-800 text-sm font-semibold">🎉 ¡Excelente rendimiento!</p>
+                                <p class="text-green-600 text-xs">Mantén el buen trabajo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deportes Section -->
+        <section id="deportes" class="section-content">
+            <div class="section-bg rounded-xl shadow-xl p-8 mb-8 text-white">
+                <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
+                    🏆 Actividades Deportivas
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-800/50 p-6 rounded-lg border border-gray-700 card-hover">
+                        <div class="text-center">
+                            <div class="text-4xl mb-4">⚽</div>
+                            <h3 class="font-bold text-lg text-white mb-2">Fútbol</h3>
+                            <p class="text-sm mb-3">Equipo universitario</p>
+                            <div class="bg-green-100 p-2 rounded">
+                                <span class="text-xs font-semibold text-green-700">Medio Campista</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800/50 p-6 rounded-lg border border-gray-700 card-hover">
+                        <div class="text-center">
+                            <div class="text-4xl mb-4">🏐</div>
+                            <h3 class="font-bold text-lg text-white mb-2">Vóley Masculino</h3>
+                            <p class="text-sm mb-3">facultad de Ingeniería Estadistica e Informática</p>
+                            <div class="bg-blue-100 p-2 rounded">
+                                <span class="text-xs font-semibold text-blue-700">Bloque-Resepción</span>
+                                <h3 class="text-xs font-semibold text-blue-700">Liga inter-facultades</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800/50 p-6 rounded-lg border border-gray-700 card-hover">
+                        <div class="text-center">
+                            <div class="text-4xl mb-4">🥋</div>
+                            <h3 class="font-bold text-lg text-white mb-2">Taekwondo</h3>
+                            <p class="text-sm mb-3">Academia UNA Puno</p>
+                            <div class="bg-red-100 p-2 rounded">
+                                <span class="text-xs font-semibold text-red-700">Cinturón Azul</span>
+                                <h3 class="text-xs font-semibold text-red-700">Liga Panamericanos-FISU</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificaciones Section -->
+        <section id="certificaciones" class="section-content">
+            <div class="section-bg rounded-xl shadow-xl p-8 mb-8 text-white">
+                <!-- Header súper amigable -->
+                <div class="text-center mb-8">
+                    <div
+                        class="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 rounded-full mb-4 shadow-2xl animate-pulse">
+                        <span class="text-4xl">🎉</span>
+                    </div>
+                    <h2
+                        class="text-4xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 bg-clip-text text-transparent mb-3">
+                        ¡Mi Colección de Súper Logros!
+                    </h2>
+                    <p class="text-xl font-medium">¡Cada certificado es una nueva aventura de aprendizaje!
+                    </p>
+
+                    <!-- Estadísticas súper amigables -->
+                    <div class="flex justify-center space-x-6 mt-8">
+                        <div
+                            class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-6 shadow-lg transform hover:scale-105 transition-all duration-300">
+                            <div class="text-4xl mb-2">📚</div>
+                            <div
+                                class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                                14</div>
+                            <div class="text-sm text-blue-700 font-semibold">Certificados Geniales</div>
+                        </div>
+                        <div
+                            class="bg-gradient-to-br from-green-100 to-green-200 rounded-2xl p-6 shadow-lg transform hover:scale-105 transition-all duration-300">
+                            <div class="text-4xl mb-2">⏰</div>
+                            <div
+                                class="text-3xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+                                320</div>
+                            <div class="text-sm text-green-700 font-semibold">Horas de Diversión</div>
+                        </div>
+                        <div
+                            class="bg-gradient-to-br from-pink-100 to-pink-200 rounded-2xl p-6 shadow-lg transform hover:scale-105 transition-all duration-300">
+                            <div class="text-4xl mb-2">⭐</div>
+                            <div
+                                class="text-3xl font-bold bg-gradient-to-r from-pink-600 to-red-600 bg-clip-text text-transparent">
+                                95%</div>
+                            <div class="text-sm text-pink-700 font-semibold">Promedio Increíble</div>
+                        </div>
+                    </div>
+
+                    <!-- Mensaje motivacional animado -->
+                    <div
+                        class="mt-6 bg-gradient-to-r from-yellow-100 via-pink-100 to-purple-100 rounded-2xl p-4 border-2 border-yellow-300 shadow-lg">
+                        <p class="text-lg font-bold text-gray-900 flex items-center justify-center space-x-2">
+                            <span class="animate-bounce">🎯</span>
+                            <span>¡Eres una máquina de aprender! ¡Sigue así campeón!</span>
+                            <span class="animate-bounce">💪</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Certificaciones destacadas -->
+                <div class="mb-8">
+                    <div class="text-center mb-6">
+                        <h3
+                            class="text-2xl font-bold bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent mb-2 flex items-center justify-center">
+                            <span class="animate-spin mr-3">🌟</span>
+                            ¡Mis Certificados Estrella!
+                            <span class="animate-spin ml-3">🌟</span>
+                        </h3>
+                        <p>¡Estos son mis favoritos y los que más me enorgullecen! 🏆</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Certificación destacada 1 -->
+                        <div
+                            class="relative bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-2 rounded-3xl shadow-2xl transform hover:scale-105 hover:rotate-1 transition-all duration-500 certification-featured">
+                            <div class="bg-gray-900 text-white rounded-2xl p-8 h-full relative overflow-hidden">
+                                <div class="absolute top-2 right-2 text-2xl animate-bounce">🎊</div>
+                                <div class="absolute top-4 left-4 text-xl animate-pulse">✨</div>
+
+                                <div class="flex items-center justify-between mb-6">
+                                    <div
+                                        class="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl flex items-center justify-center shadow-xl transform hover:rotate-12 transition-transform">
+                                        <span class="text-white text-3xl">📊</span>
+                                    </div>
+                                    <div
+                                        class="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-xl animate-pulse">
+                                        🏆 ¡SÚPER ESTRELLA!
+                                    </div>
+                                </div>
+
+                                <h4 class="text-2xl font-bold mb-3">🎯 Ciencia de Datos</h4>
+                                <p class="mb-4 font-medium">¡Convertí números en historias increíbles!</p>
+
+                                <div class="bg-gray-800 rounded-2xl p-4 mb-4">
+                                    <div class="flex items-center justify-between">
+                                        <div class="text-sm text-gray-300">
+                                            <p class="flex items-center"><span class="mr-2">🗓️</span>Nov 2023</p>
+                                            <p class="flex items-center"><span class="mr-2">⏰</span>80 horas</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <div
+                                                class="text-4xl font-bold bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
+                                                98%</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-green-100 rounded-xl p-3 text-center">
+                                    <p class="text-green-800 font-bold text-sm">¡Mi certificado favorito! Me encanta
+                                        analizar datos</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Certificación destacada 2 -->
+                        <div
+                            class="relative bg-gradient-to-br from-green-400 via-teal-500 to-blue-500 p-2 rounded-3xl shadow-2xl transform hover:scale-105 hover:-rotate-1 transition-all duration-500 certification-featured">
+                            <div class="bg-gray-900 text-white rounded-2xl p-8 h-full relative overflow-hidden">
+                                <div class="absolute top-2 left-2 text-2xl animate-bounce">🎉</div>
+                                <div class="absolute top-4 right-4 text-xl animate-pulse">💫</div>
+
+                                <div class="flex items-center justify-between mb-6">
+                                    <div
+                                        class="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-600 rounded-3xl flex items-center justify-center shadow-xl transform hover:-rotate-12 transition-transform">
+                                        <span class="text-white text-3xl">🤖</span>
+                                    </div>
+                                    <div
+                                        class="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-xl animate-pulse">
+                                        🏆 ¡SÚPER ESTRELLA!
+                                    </div>
+                                </div>
+
+                                <h4 class="text-2xl font-bold mb-3">🚀 Machine Learning</h4>
+                                <p class="mb-4 font-medium">¡Enseñé a las máquinas a ser inteligentes!</p>
+
+                                <div class="bg-gray-800 rounded-2xl p-4 mb-4">
+                                    <div class="flex items-center justify-between">
+                                        <div class="text-sm text-gray-300">
+                                            <p class="flex items-center"><span class="mr-2">🗓️</span>Oct 2023</p>
+                                            <p class="flex items-center"><span class="mr-2">⏰</span>60 horas</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <div
+                                                class="text-4xl font-bold bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent">
+                                                96%</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-teal-100 rounded-xl p-3 text-center">
+                                    <p class="text-teal-800 font-bold text-sm">¡Ahora hablo el idioma de las
+                                        máquinas! Beep boop</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galería de certificaciones -->
+                <div>
+                    <div class="text-center mb-8">
+                        <h3
+                            class="text-2xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-3 flex items-center justify-center">
+                            <span class="mr-3"></span>
+                            ¡Mi Galería de Aventuras de Aprendizaje!
+                            <span class="ml-3"></span>
+                        </h3>
+                        <p class="text-lg">Cada tarjeta cuenta una historia diferente de mi viaje
+                            educativo</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Certificación 1 -->
+                        <div
+                            class="bg-gray-800/50 text-white rounded-xl p-6 border-2 border-blue-900 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 certification-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center shadow-md">
+                                    <span class="text-white text-xl">📊</span>
+                                </div>
+                                <div class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                    ✅ Certificado
+                                </div>
+                            </div>
+                            <h4 class="font-bold mb-2">Ciencia de Datos</h4>
+                            <p class="text-sm mb-3">Análisis y visualización de datos</p>
+                            <div class="flex items-center justify-between text-xs">
+                                <span>📅 Nov 2023</span>
+                                <span class="font-bold text-green-600">98%</span>
+                            </div>
+                        </div>
+
+                        <!-- Certificación 2 -->
+                        <div
+                            class="bg-gray-800/50 text-white rounded-xl p-6 border-2 border-purple-900 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 certification-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center shadow-md">
+                                    <span class="text-white text-xl">🗃️</span>
+                                </div>
+                                <div class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                    ✅ Certificado
+                                </div>
+                            </div>
+                            <h4 class="font-bold mb-2">Big Data</h4>
+                            <p class="text-sm mb-3">Procesamiento de grandes volúmenes</p>
+                            <div class="flex items-center justify-between text-xs">
+                                <span>📅 Sep 2023</span>
+                                <span class="font-bold text-green-600">94%</span>
+                            </div>
+                        </div>
+
+                        <!-- Certificación 3 -->
+                        <div
+                            class="bg-gray-800/50 text-white rounded-xl p-6 border-2 border-green-900 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 certification-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center shadow-md">
+                                    <span class="text-white text-xl">💻</span>
+                                </div>
+                                <div class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                    ✅ Certificado
+                                </div>
+                            </div>
+                            <h4 class="font-bold mb-2">Cómputo Básico</h4>
+                            <p class="text-sm mb-3">Fundamentos de computación</p>
+                            <div class="flex items-center justify-between text-xs">
+                                <span>📅 Ago 2023</span>
+                                <span class="font-bold text-green-600">97%</span>
+                            </div>
+                        </div>
+
+                        <!-- Certificación 4 -->
+                        <div
+                            class="bg-gray-800/50 text-white rounded-xl p-6 border-2 border-yellow-900 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 certification-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center shadow-md">
+                                    <span class="text-white text-xl">📄</span>
+                                </div>
+                                <div class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                    ✅ Certificado
+                                </div>
+                            </div>
+                            <h4 class="font-bold mb-2">Ofimática</h4>
+                            <p class="text-sm mb-3">Suite de oficina completa</p>
+                            <div class="flex items-center justify-between text-xs">
+                                <span>📅 Jul 2023</span>
+                                <span class="font-bold text-green-600">95%</span>
+                            </div>
+                        </div>
+
+                        <!-- Certificación 5 -->
+                        <div
+                            class="bg-gray-800/50 text-white rounded-xl p-6 border-2 border-indigo-900 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 certification-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-xl flex items-center justify-center shadow-md">
+                                    <span class="text-white text-xl">🔧</span>
+                                </div>
+                                <div class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                    ✅ Certificado
+                                </div>
+                            </div>
+                            <h4 class="font-bold mb-2">Técnico en Informática</h4>
+                            <p class="text-sm mb-3">Soporte técnico y mantenimiento</p>
+                            <div class="flex items-center justify-between text-xs">
+                                <span>📅 Jun 2023</span>
+                                <span class="font-bold text-green-600">93%</span>
+                            </div>
+                        </div>
+
+                        <!-- Certificación 6 -->
+                        <div
+                            class="bg-gray-800/50 text-white rounded-xl p-6 border-2 border-pink-900 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 certification-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-br from-pink-400 to-pink-600 rounded-xl flex items-center justify-center shadow-md">
+                                    <span class="text-white text-xl">📱</span>
+                                </div>
+                                <div class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                    ✅ Certificado
+                                </div>
+                            </div>
+                            <h4 class="font-bold mb-2">Programación de Apps</h4>
+                            <p class="text-sm mb-3">Desarrollo de aplicaciones móviles</p>
+                            <div class="flex items-center justify-between text-xs">
+                                <span>📅 May 2023</span>
+                                <span class="font-bold text-green-600">96%</span>
+                            </div>
+                        </div>
+
+                        <!-- Certificación 7: Python -->
+                        <div
+                            class="bg-gray-800/50 text-white rounded-xl p-6 border-2 border-yellow-900 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 certification-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center shadow-md">
+                                    <span class="text-white text-xl">🐍</span>
+                                </div>
+                                <div class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                    ✅ Certificado
+                                </div>
+                            </div>
+                            <h4 class="font-bold mb-2">Python para Ciencia de Datos</h4>
+                            <p class="text-sm mb-3">Uso de Pandas, NumPy y Matplotlib</p>
+                            <div class="flex items-center justify-between text-xs">
+                                <span>📅 Abr 2023</span>
+                                <span class="font-bold text-green-600">97%</span>
+                            </div>
+                        </div>
+
+                        <!-- Certificación 8: SQL -->
+                        <div
+                            class="bg-gray-800/50 text-white rounded-xl p-6 border-2 border-cyan-900 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 certification-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-xl flex items-center justify-center shadow-md">
+                                    <span class="text-white text-xl">💾</span>
+                                </div>
+                                <div class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                    ✅ Certificado
+                                </div>
+                            </div>
+                            <h4 class="font-bold mb-2">SQL para Análisis de Datos</h4>
+                            <p class="text-sm mb-3">Consultas avanzadas y manipulación</p>
+                            <div class="flex items-center justify-between text-xs">
+                                <span>📅 Mar 2023</span>
+                                <span class="font-bold text-green-600">95%</span>
+                            </div>
+                        </div>
+
+                        <!-- Certificación 9: Business Intelligence -->
+                        <div
+                            class="bg-gray-800/50 text-white rounded-xl p-6 border-2 border-teal-900 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 certification-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-600 rounded-xl flex items-center justify-center shadow-md">
+                                    <span class="text-white text-xl">📈</span>
+                                </div>
+                                <div class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                    ✅ Certificado
+                                </div>
+                            </div>
+                            <h4 class="font-bold mb-2">Business Intelligence</h4>
+                            <p class="text-sm mb-3">Dashboards con Power BI y Tableau</p>
+                            <div class="flex items-center justify-between text-xs">
+                                <span>📅 Feb 2023</span>
+                                <span class="font-bold text-green-600">94%</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Mensaje final motivacional -->
+
+            </div>
+        </section>
+
+        <!-- Página detallada de curso -->
+        <section id="curso-detalle" class="section-content hidden">
+            <div class="section-bg rounded-xl shadow-xl mb-8">
+                <div class="course-detail-header text-white p-8 rounded-t-xl">
+                    <!-- Corregido: Botón "Volver" ahora es un nav-btn -->
+                    <div class="flex items-center justify-between mb-4">
+                        <button onclick="showSection('cursos', event)"
+                            class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors flex items-center space-x-2">
+                            <span>←</span>
+                            <span>Volver a Cursos</span>
+                        </button>
+                        <div class="text-right">
+                            <div class="text-3xl font-bold">87%</div>
+                            <div class="text-sm opacity-90">Promedio General</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                            <span class="text-3xl">📊</span>
+                        </div>
+                        <div>
+                            <h1 class="text-3xl font-bold mb-2">Estadística Computacional</h1>
+                            <p class="text-blue-100">V Semestre • Dr. Edgardo Yapo Quispe • 6 horas/semana</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8">
+                    <div id="course-description-content" class="mb-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-2xl font-bold text-white">📖 Descripción del Curso</h2>
+                            <button id="speak-course-desc-btn" title="Leer descripción en voz alta"
+                                class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full flex items-center justify-center">
+                                <!-- Icono Play -->
+                                <svg class="h-5 w-5 speak-icon-play" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                                </svg>
+                                <!-- Icono Pause -->
+                                <svg class="h-5 w-5 speak-icon-pause hidden" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M5.75 4.5a.75.75 0 00-.75.75v10.5a.75.75 0 001.5 0V5.25a.75.75 0 00-.75-.75zM14.25 4.5a.75.75 0 00-.75.75v10.5a.75.75 0 001.5 0V5.25a.75.75 0 00-.75-.75z" />
+                                </svg>
+                                <!-- Icono Stop -->
+                                <svg class="h-5 w-5 speak-icon-stop hidden" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M5.25 5.25A.75.75 0 004.5 6v8a.75.75 0 001.5 0V6A.75.75 0 005.25 5.25zM14.75 5.25a.75.75 0 00-.75.75v8a.75.75 0 001.5 0V6a.75.75 0 00-.75-.75z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed">
+                            Este curso te sumergirá en el fascinante mundo de la Estadística Computacional, una
+                            disciplina que fusiona la potencia del análisis estadístico con la eficiencia de la
+                            computación moderna. A lo largo de las semanas, explorarás desde la generación de números
+                            pseudoaleatorios y su validación, hasta la simulación de sistemas complejos como colas e
+                            inventarios. Aprenderás a implementar métodos cruciales como la Transformada Inversa,
+                            Aceptación y Rechazo, y Composición, utilizando herramientas de software líderes en la
+                            industria como R y Python. El objetivo es equiparte con las habilidades prácticas para
+                            modelar, simular y analizar fenómenos del mundo real, convirtiendo datos en decisiones
+                            informadas y soluciones innovadoras. ¡Prepárate para un viaje práctico y desafiante que
+                            potenciará tu perfil como científico de datos!
+                        </p>
+                        <p class="text-gray-300 leading-relaxed mt-4">
+                            La Estadística Computacional combina métodos estadísticos con herramientas computacionales
+                            para analizar grandes conjuntos de datos y resolver problemas complejos. Este curso
+                            proporciona
+                            una base sólida en técnicas estadísticas modernas utilizando software especializado como R y
+                            Python.
+                        </p>
+                    </div>
+
+                    <!-- Temario del Curso -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">📚 Temario del Curso</h2>
+                        <div class="space-y-2">
+                            <!-- Semana 1 -->
+                            <div class="border rounded-lg">
+                                <button
+                                    onclick="showWeekDetail('Semana 1: Introducción a la Simulación', 'Conceptos básicos, sistemas y modelos.')"
+                                    class="w-full text-left p-4 flex justify-between items-center bg-gray-800/50 hover:bg-gray-800/80 text-white">
+                                    <span class="font-semibold">Semana 1: Introducción a la Simulación</span>
+                                    <span>→</span>
+                                </button>
+                            </div>
+                            <!-- Semana 2 -->
+                            <div class="border rounded-lg">
+                                <button
+                                    onclick="showWeekDetail('Semana 2: Generación de Números Pseudoaleatorios', 'Métodos de generación (lineal, mixto, multiplicativo).', document.getElementById('semana2-template').innerHTML)"
+                                    class="w-full text-left p-4 flex justify-between items-center bg-gray-800/50 hover:bg-gray-800/80 text-white">
+                                    <span class="font-semibold">Semana 2: Generación de Números Aleatorios</span>
+                                    <span>→</span>
+                                </button>
+                            </div>
+                            <!-- Semana 3 -->
+                            <div class="border rounded-lg">
+                                <button
+                                    onclick="showWeekDetail('Semana 3: Métodos No Congruenciales', 'Cuadrados medios, productos medios y multiplicador constante.', document.getElementById('semana3-template').innerHTML)"
+                                    class="w-full text-left p-4 flex justify-between items-center bg-gray-800/50 hover:bg-gray-800/80 text-white">
+                                    <span class="font-semibold">Semana 3: Métodos No Congruenciales</span>
+                                    <span>→</span>
+                                </button>
+                            </div>
+                            <!-- Semana 4 -->
+                            <div class="border rounded-lg">
+                                <button
+                                    onclick="showWeekDetail('Semana 4: Pruebas de Independencia', 'Prueba de Series, Prueba de Corridas Arriba y Abajo.', document.getElementById('semana4-template').innerHTML)"
+                                    class="w-full text-left p-4 flex justify-between items-center bg-gray-800/50 hover:bg-gray-800/80 text-white">
+                                    <span class="font-semibold">Semana 4: Pruebas de Independencia</span>
+                                    <span>→</span>
+                                </button>
+                            </div>
+                            <!-- Semana 5 -->
+                            <div class="border rounded-lg">
+                                <button
+                                    onclick="showWeekDetail('Semana 5: Pruebas de Uniformidad (Bondad de Ajuste)', 'Prueba Chi-Cuadrado, Prueba Kolmogorov-Smirnov.', document.getElementById('semana5-template').innerHTML)"
+                                    class="w-full text-left p-4 flex justify-between items-center bg-gray-800/50 hover:bg-gray-800/80 text-white">
+                                    <span class="font-semibold">Semana 5: Pruebas de Uniformidad (Bondad de
+                                        Ajuste)</span>
+                                    <span>→</span>
+                                </button>
+                            </div>
+                            <!-- Semana 6 -->
+                            <div class="border rounded-lg">
+                                <button
+                                    onclick="showWeekDetail('Semana 6: Generación de Variables Aleatorias', 'Generación de variables continuas (Exponencial, Normal) y discretas (Bernoulli, Binomial).', document.getElementById('semana6-template').innerHTML)"
+                                    class="w-full text-left p-4 flex justify-between items-center bg-gray-800/50 hover:bg-gray-800/80 text-white">
+                                    <span class="font-semibold">Semana 6: Generación de Variables Aleatorias</span>
+                                    <span>→</span>
+                                </button>
+                            </div>
+                            <!-- Semanas 7-9 -->
+                            <!-- Semana 7 -->
+                            <div class="border rounded-lg">
+                                <button
+                                    onclick="showWeekDetail('Semana 7: Simulación de Monte Carlo', 'Diseño de simulaciones para estimar probabilidades y parámetros.', document.getElementById('semana7-template').innerHTML)"
+                                    class="w-full text-left p-4 flex justify-between items-center bg-gray-800/50 hover:bg-gray-800/80 text-white">
+                                    <span class="font-semibold">Semana 7: Simulación de Monte Carlo</span>
+                                    <span>→</span>
+                                </button>
+                            </div>
+                            <!-- Semana 7 -->
+                            <div class="border rounded-lg">
+                                <button
+                                    onclick="showWeekDetail('Semana 8: Simulación de Sistemas de Colas', 'Modelado y simulación de sistemas de línea de espera.')"
+                                    class="w-full text-left p-4 flex justify-between items-center bg-gray-800/50 hover:bg-gray-800/80 text-white">
+                                    <span class="font-semibold">Semana 8: Simulación de Sistemas de Colas</span>
+                                    <span>→</span>
+                                </button>
+                            </div>
+                            <!-- Semana 8 -->
+                            <div class="border rounded-lg">
+                                <button
+                                    onclick="showWeekDetail('Semana 9: Método de Composición', 'Uso del método de composición para distribuciones mixtas.')"
+                                    class="w-full text-left p-4 flex justify-between items-center bg-gray-800/50 hover:bg-gray-800/80 text-white">
+                                    <span class="font-semibold">Semana 9: Método de Composición</span>
+                                    <span>→</span>
+                                </button>
+                            </div>
+                            <!-- Semana 10 -->
+                            <div class="border rounded-lg">
+                                <button
+                                    onclick="showWeekDetail('Semana 9: Simulación de Inventarios', 'Modelado y simulación de políticas de inventario.')"
+                                    class="w-full text-left p-4 flex justify-between items-center bg-gray-800/50 hover:bg-gray-800/80 text-white">
+                                    <span class="font-semibold">Semana 9: Simulación de Inventarios</span>
+                                    <span>→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 text-white">
+                        <div class="bg-green-900/30 p-6 rounded-lg border border-green-700">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="font-bold text-green-800">Examen Parcial</h3>
+                                <span class="text-2xl font-bold text-white">85%</span>
+                            </div>
+                            <p class="text-sm">Peso: 30% de la nota final</p>
+                        </div>
+
+                        <div class="bg-blue-900/30 p-6 rounded-lg border border-blue-700">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="font-bold text-blue-800">Prácticas Lab</h3>
+                                <span class="text-2xl font-bold text-white">92%</span>
+                            </div>
+                            <p class="text-sm">Peso: 40% de la nota final</p>
+                        </div>
+
+                        <div class="bg-yellow-900/30 p-6 rounded-lg border border-yellow-700">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="font-bold text-yellow-800">Proyecto Final</h3>
+                                <span class="text-lg font-bold text-white">Pendiente</span>
+                            </div>
+                            <p class="text-sm">Peso: 30% de la nota final</p>
+                        </div>
+                    </div>
+
+                    <!-- Botón Volver inferior -->
+                    <div class="mt-12 text-center">
+                        <button onclick="showSection('cursos', event)"
+                            class="bg-white bg-opacity-80 hover:bg-opacity-100 border border-blue-200 text-blue-700 px-6 py-3 rounded-lg transition-colors flex items-center space-x-2 mx-auto shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                            <span>←</span>
+                            <span>Volver a Cursos</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página detallada de la semana -->
+        <section id="semana-detalle" class="section-content hidden">
+            <div class="section-bg rounded-xl shadow-xl mb-8">
+                <div class="gradient-bg text-white p-8 rounded-t-xl">
+                    <div class="flex items-center justify-between mb-4">
+                        <button onclick="backToSyllabus()"
+                            class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors flex items-center space-x-2">
+                            <span>←</span>
+                            <span>Volver al Temario</span>
+                        </button>
+                        <button id="speak-week-content-btn" title="Leer contenido en voz alta"
+                            class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full flex items-center justify-center">
+                            <!-- Icono Play -->
+                            <svg class="h-5 w-5 speak-icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                            </svg>
+                            <!-- Icono Pause -->
+                            <svg class="h-5 w-5 speak-icon-pause hidden" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M5.75 4.5a.75.75 0 00-.75.75v10.5a.75.75 0 001.5 0V5.25a.75.75 0 00-.75-.75zM14.25 4.5a.75.75 0 00-.75.75v10.5a.75.75 0 001.5 0V5.25a.75.75 0 00-.75-.75z" />
+                            </svg>
+                            <!-- Icono Stop -->
+                            <svg class="h-5 w-5 speak-icon-stop hidden" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M5.25 5.25A.75.75 0 004.5 6v8a.75.75 0 001.5 0V6A.75.75 0 005.25 5.25zM14.75 5.25a.75.75 0 00-.75.75v8a.75.75 0 001.5 0V6a.75.75 0 00-.75-.75z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <h1 id="semana-detalle-titulo" class="text-3xl font-bold mb-2"></h1>
+                    <p id="semana-detalle-descripcion" class="text-blue-100"></p>
+                </div>
+
+                <div class="p-8">
+                    <!-- Contenedor para el contenido dinámico de la semana -->
+                    <div id="semana-detalle-contenido" class="text-gray-300 leading-relaxed space-y-6"></div>
+                    <!-- Botón Volver inferior -->
+                    <div class="mt-12 text-center">
+                        <button onclick="backToSyllabus()"
+                            class="nav-btn bg-white bg-opacity-80 hover:bg-opacity-100 border border-blue-200 text-blue-700 px-6 py-3 rounded-lg transition-colors flex items-center space-x-2 mx-auto shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                            <span>←</span>
+                            <span>Volver al Temario</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Templates para contenido de semanas -->
+    <template id="semana2-template">
+        <div class="bg-white text-gray-800 p-6 rounded-lg shadow-inner">
+            <h3 class="text-2xl font-bold text-gray-900 mb-3">Generadores de Números Pseudoaleatorios por Métodos
+                Congruenciales</h3>
+            <p class="text-gray-700">Los generadores de números pseudoaleatorios son algoritmos utilizados para generar
+                una secuencia de números que, aunque no son realmente aleatorios, se comportan como si lo fueran. Estos
+                generadores son ampliamente utilizados en simulaciones, pruebas estadísticas y criptografía.</p>
+            <p class="text-gray-700 mt-2">Los métodos congruenciales son una de las formas más sencillas y utilizadas de
+                generar secuencias pseudoaleatorias. Existen varios tipos, y entre los más conocidos están el método
+                lineal congruencial, el método multiplicativo y el método mixto.</p>
+
+            <!-- 1. Método Lineal Congruencial -->
+            <div class="pt-4">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">1. Método Lineal Congruencial (LCG)</h4>
+                <p class="text-gray-700">El método lineal congruencial (LCG) es uno de los generadores de números
+                    pseudoaleatorios más antiguos y populares. El algoritmo genera una secuencia de números utilizando
+                    una fórmula recursiva que depende de los parámetros <strong>a</strong>, <strong>c</strong>,
+                    <strong>m</strong> y un valor inicial <strong>X₀</strong>.
+                </p>
+                <div class="my-4 p-4 bg-gray-100 rounded-lg border border-gray-200 text-center">
+                    <p class="text-lg font-mono text-indigo-600">X<sub>n+1</sub> = (a ⋅ X<sub>n</sub> + c) mod m</p>
+                </div>
+                <p class="text-gray-700">Este método tiene un período máximo de <strong>m</strong> y se utiliza
+                    comúnmente en muchas aplicaciones.</p>
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Ejemplo en Python:</h5>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">ejemplo_lcg.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                            <button onclick="runPythonCode(this)"
+                                class="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-3 rounded flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <span>Ejecutar</span>
+                            </button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">import sys
+
+def lcg(seed, a, c, m, n):
+    numbers = []
+    x = seed
+    for _ in range(n):
+        x = (a * x + c) % m
+        numbers.append(x / m)  # Normalizar a [0, 1)
+    return numbers
+
+# Parámetros del LCG
+seed = 42
+a = 1664525
+c = 1013904223
+m = 2 ** 32
+n = 10
+
+random_numbers = lcg(seed, a, c, m, n)
+
+str(random_numbers)
+                    </code></pre>
+                    <div class="bg-black/50 text-white p-4 font-mono text-sm border-t border-gray-700">
+                        <p class="text-gray-400 mb-2">Salida:</p>
+                        <pre class="python-output">(Presiona "Ejecutar" para ver el resultado)</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Método Multiplicativo Congruencial -->
+            <div class="pt-4">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">2. Método Multiplicativo Congruencial</h4>
+                <p class="text-gray-700">Es una variante del LCG donde el incremento <strong>c</strong> es 0. La fórmula
+                    es:</p>
+                <div class="my-4 p-4 bg-gray-100 rounded-lg border border-gray-200 text-center">
+                    <p class="text-lg font-mono text-indigo-600">X<sub>n+1</sub> = (a ⋅ X<sub>n</sub>) mod m</p>
+                </div>
+                <p class="text-gray-700">Este método es más simple, pero su período puede ser más corto.</p>
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Ejemplo en Python:</h5>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">ejemplo_multiplicativo.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                            <button onclick="runPythonCode(this)"
+                                class="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-3 rounded flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <span>Ejecutar</span>
+                            </button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">import sys
+
+def multiplicative_congruential(seed, a, m, n):
+    numbers = []
+    x = seed
+    for _ in range(n):
+        x = (a * x) % m
+        numbers.append(x / m)  # Normalizar a [0, 1)
+    return numbers
+
+# Parámetros del método multiplicativo
+seed = 42
+a = 1103515245  # Multiplicador típico
+m = 2 ** 32       # Módulo
+n = 10          # Cantidad de números a generar
+
+random_numbers = multiplicative_congruential(seed, a, m, n)
+
+str(random_numbers)
+                    </code></pre>
+                    <div class="bg-black/50 text-white p-4 font-mono text-sm border-t border-gray-700">
+                        <p class="text-gray-400 mb-2">Salida:</p>
+                        <pre class="python-output">(Presiona "Ejecutar" para ver el resultado)</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Método Mixto Congruencial -->
+            <div class="pt-4">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">3. Método Mixto Congruencial</h4>
+                <p class="text-gray-700">Este término a menudo se usa como sinónimo del Método Lineal Congruencial
+                    (cuando c > 0), para distinguirlo del caso multiplicativo (c = 0). La fórmula es la misma que la del
+                    LCG:</p>
+                <div class="my-4 p-4 bg-gray-100 rounded-lg border border-gray-200 text-center">
+                    <p class="text-lg font-mono text-indigo-600">X<sub>n+1</sub> = (a ⋅ X<sub>n</sub> + c) mod m</p>
+                </div>
+                <p class="text-gray-700">Es el método más general y flexible, ya que puede controlar mejor la calidad de
+                    los números generados mediante la selección cuidadosa de <strong>a</strong>, <strong>c</strong> y
+                    <strong>m</strong>.
+                </p>
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Ejemplo en Python:</h5>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">ejemplo_mixto.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                            <button onclick="runPythonCode(this)"
+                                class="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-3 rounded flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <span>Ejecutar</span>
+                            </button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">import sys
+
+def mixed_congruential(seed, a, c, m, n):
+    numbers = []
+    x = seed
+    for _ in range(n):
+        x = (a * x + c) % m
+        numbers.append(x / m)  # Normalizar a [0, 1)
+    return numbers
+
+# Parámetros del método mixto (similares al LCG)
+seed = 42
+a = 1664525      # Multiplicador
+c = 1013904223   # Incremento
+m = 2 ** 32        # Módulo
+n = 10           # Cantidad de números a generar
+
+random_numbers = mixed_congruential(seed, a, c, m, n)
+
+str(random_numbers)
+                    </code></pre>
+                    <div class="bg-black/50 text-white p-4 font-mono text-sm border-t border-gray-700">
+                        <p class="text-gray-400 mb-2">Salida:</p>
+                        <pre class="python-output">(Presiona "Ejecutar" para ver el resultado)</pre>
+                    </div>
+                </div>
+
+                <h5 class="font-semibold text-gray-800 mt-6 mb-2">Ejemplo (Generando Enteros):</h5>
+                <p class="text-gray-700 mb-2">A veces es útil obtener los números enteros generados por el algoritmo
+                    antes de normalizarlos.</p>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">ejemplo_mixto_enteros.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                            <button onclick="runPythonCode(this)"
+                                class="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-3 rounded flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <span>Ejecutar</span>
+                            </button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">def mixed_congruential_int(seed, a, c, m, n):
+    numbers = []
+    x = seed
+    for _ in range(n):
+        x = (a * x + c) % m
+        numbers.append(x) # No se normaliza
+    return numbers
+
+# Parámetros del método mixto
+seed = 42
+a = 1664525
+c = 1013904223
+m = 2**32
+n = 10
+
+random_integers = mixed_congruential_int(seed, a, c, m, n)
+
+str(random_integers)
+</code></pre>
+                    <div class="bg-black/50 text-white p-4 font-mono text-sm border-t border-gray-700">
+                        <p class="text-gray-400 mb-2">Salida:</p>
+                        <pre class="python-output">(Presiona "Ejecutar" para ver el resultado)</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Método Congruencial Aditivo -->
+            <div class="pt-4">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">4. Método Congruencial Aditivo</h4>
+                <p class="text-gray-700">Este método genera el siguiente número a partir de la suma de dos números
+                    anteriores en la secuencia, en lugar de usar una multiplicación. La fórmula general es:</p>
+                <div class="my-4 p-4 bg-gray-100 rounded-lg border border-gray-200 text-center">
+                    <p class="text-lg font-mono text-indigo-600">X<sub>n</sub> = (X<sub>n-1</sub> + X<sub>n-k</sub>) mod
+                        m</p>
+                </div>
+                <p class="text-gray-700">Requiere una secuencia inicial de al menos <strong>k</strong> números para
+                    empezar. Es computacionalmente más rápido que los métodos multiplicativos, ya que solo implica una
+                    suma.</p>
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Ejemplo en Python:</h5>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">ejemplo_aditivo.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                            <button onclick="runPythonCode(this)"
+                                class="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-3 rounded flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <span>Ejecutar</span>
+                            </button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">def additive_congruential(initial_sequence, m, n):
+    """
+    Genera números pseudoaleatorios usando el método congruencial aditivo.
+    initial_sequence: Lista de números iniciales (semillas).
+    m: Módulo.
+    n: Cantidad total de números a generar (incluyendo la secuencia inicial).
+    """
+    numbers = list(initial_sequence)
+    k = len(initial_sequence)
+    
+    for i in range(k, n):
+        # La fórmula es Xn = (Xn-1 + Xn-k) mod m
+        new_x = (numbers[i-1] + numbers[i-k]) % m
+        numbers.append(new_x)
+        
+    return [num / m for num in numbers] # Normalizar a [0, 1)
+
+str(additive_congruential([1, 2, 3, 4], m=100, n=20))</code></pre>
+                    <div class="bg-black/50 text-white p-4 font-mono text-sm border-t border-gray-700">
+                        <p class="text-gray-400 mb-2">Salida:</p>
+                        <pre class="python-output">(Presiona "Ejecutar" para ver el resultado)</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="semana3-template">
+        <div class="bg-white text-gray-800 p-6 rounded-lg shadow-inner">
+            <h3 class="text-2xl font-bold text-gray-900 mb-3">Generadores No Congruenciales</h3>
+            <p class="text-gray-700">A diferencia de los métodos congruenciales que se basan en aritmética modular, los
+                métodos no congruenciales utilizan otras operaciones aritméticas para generar secuencias de números
+                pseudoaleatorios. Estos métodos fueron de los primeros en ser propuestos y, aunque algunos tienen
+                debilidades, son importantes históricamente y para entender la evolución de los generadores.</p>
+
+            <!-- 1. Método de los Cuadrados Medios -->
+            <div class="pt-4">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">1. Método de los Cuadrados Medios</h4>
+                <p class="text-gray-700">Propuesto por John von Neumann, es uno de los métodos más antiguos. El
+                    procedimiento es el siguiente:</p>
+                <ol class="list-decimal list-inside text-gray-700 mt-2 space-y-1">
+                    <li>Se inicia con una "semilla" (X₀) de <strong>D</strong> dígitos.</li>
+                    <li>Se eleva la semilla al cuadrado para obtener un número de hasta <strong>2D</strong> dígitos. Si
+                        es necesario, se añaden ceros a la izquierda para completar los 2D dígitos.</li>
+                    <li>Se extraen los <strong>D</strong> dígitos del centro del resultado. Este nuevo número es el
+                        siguiente número pseudoaleatorio (X₁) y la nueva semilla.</li>
+                    <li>Para obtener el número ri en el intervalo [0, 1), se coloca un punto decimal a la izquierda: ri
+                        = Xᵢ / 10ᴰ.</li>
+                </ol>
+                <p class="text-gray-700 mt-2">Este método puede degenerar rápidamente (llegar a un ciclo corto o al
+                    número 0), por lo que no es recomendable para simulaciones serias, pero es un excelente ejemplo
+                    conceptual.</p>
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Ejemplo en Python:</h5>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">ejemplo_cuadrados_medios.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                            <button onclick="runPythonCode(this)"
+                                class="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-3 rounded flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <span>Ejecutar</span>
+                            </button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">import sys
+def central(Y, D):
+    y_squared = Y ** 2
+    # Rellena con ceros a la izquierda para tener 2*D dígitos
+    y_squared_str = str(y_squared).zfill(2 * D)
+    
+    start_index = (len(y_squared_str) - D) // 2
+    central_digits_str = y_squared_str[start_index : start_index + D]
+    
+    return int(central_digits_str), y_squared_str
+
+def medios_cuadrados_detallado(seed, n_digits, n_iter):
+    output_lines = []
+    x = seed
+    output_lines.append(f"Semilla (X0): {seed}, Dígitos (D): {n_digits}, Iteraciones: {n_iter}\\n")
+    output_lines.append("--- Resultados ---")
+    
+    for i in range(n_iter):
+        xi, yi_str = central(x, n_digits)
+        r = xi / (10 ** n_digits)
+        line = f"Y{i} = ({x:0{n_digits}d})^2 = {yi_str}  => X{i+1} = {xi:0{n_digits}d}  => r{i+1} = {r:.{n_digits}f}"
+        output_lines.append(line)
+        x = xi
+        
+    return "\\n".join(output_lines)
+
+medios_cuadrados_detallado(seed=3708, n_digits=4, n_iter=10)
+                    </code></pre>
+                    <div class="bg-black/50 text-white p-4 font-mono text-sm border-t border-gray-700">
+                        <p class="text-gray-400 mb-2">Salida:</p>
+                        <pre class="python-output">(Presiona "Ejecutar" para ver el resultado)</pre>
+                    </div>
+                </div>
+
+                <h5 class="font-semibold text-gray-800 mt-6 mb-2">Ejemplo Detallado (Paso a Paso):</h5>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">ejemplo_cuadrados_medios_detallado.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                            <button onclick="runPythonCode(this)"
+                                class="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-3 rounded flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <span>Ejecutar</span>
+                            </button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">def central_v2(Y, D):
+    Y1 = Y ** 2
+    Y1_str = str(Y1)
+    n = len(Y1_str)
+
+    if D > n:
+        return None, Y1_str
+    else:
+        Z = (n - D) // 2
+        centrales = Y1_str[Z:Z + D]
+        return int(centrales), Y1_str
+
+def medios_cuadrados_v2(X0, R, D):
+    output_lines = [
+        f"Semilla: {X0}, Dígitos: {D}, Iteraciones: {R}\\n",
+        "Yi                      Xi              Ui"
+    ]
+    x = X0
+    
+    for i in range(R):
+        xi, yi_str = central_v2(x, D)
+        if xi is None:
+            output_lines.append("Error: No se pueden extraer los dígitos centrales.")
+            break
+
+        # Formato de Yi para impresión
+        if len(yi_str) >= 8:
+            yi_print = yi_str
+        else:
+            yi_print = yi_str.zfill(8)
+
+        xi_str = f"{xi:0{D}d}"
+        ui = xi / (10 ** D)
+
+        line = f"{yi_print:<22}{xi_str:>8}{ui:>16.{D}f}"
+        output_lines.append(line)
+
+        x = xi
+
+    return "\\n".join(output_lines)
+
+# Parámetros
+semilla = 5735
+digitos_centrales = 4
+num_a_generar = 10
+
+medios_cuadrados_v2(semilla, num_a_generar, digitos_centrales)</code></pre>
+                    <div class="bg-black/50 text-white p-4 font-mono text-sm border-t border-gray-700">
+                        <p class="text-gray-400 mb-2">Salida:</p>
+                        <pre class="python-output">(Presiona "Ejecutar" para ver el resultado)</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Método de los Productos Medios -->
+            <div class="pt-4">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">2. Método de los Productos Medios</h4>
+                <p class="text-gray-700">Es una variante del método anterior que busca extender el período de la
+                    secuencia. Requiere dos semillas iniciales.</p>
+                <ol class="list-decimal list-inside text-gray-700 mt-2 space-y-1">
+                    <li>Se inicia con dos semillas (X₀ y X₁) de <strong>D</strong> dígitos cada una.</li>
+                    <li>Se multiplican X₀ y X₁ para obtener un número de hasta <strong>2D</strong> dígitos. Se añaden
+                        ceros a la izquierda si es necesario.</li>
+                    <li>Se extraen los <strong>D</strong> dígitos del centro. Este es el nuevo número X₂.</li>
+                    <li>El proceso se repite multiplicando X₁ y X₂ para obtener X₃, y así sucesivamente.</li>
+                </ol>
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Ejemplo en Python:</h5>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">ejemplo_productos_medios.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                            <button onclick="runPythonCode(this)"
+                                class="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-3 rounded flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <span>Ejecutar</span>
+                            </button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">import sys
+                
+def mid_product(seed1, seed2, n_digits, n_iter):
+    numbers = []
+    x0, x1 = seed1, seed2
+    for _ in range(n_iter):
+        product_str = str(x0 * x1).zfill(2 * n_digits)
+        mid_start = (len(product_str) - n_digits) // 2
+        new_x = int(product_str[mid_start : mid_start + n_digits])
+        numbers.append(new_x / (10**n_digits))
+        x0, x1 = x1, new_x
+    return numbers
+
+# Parámetros
+seed1 = 5135
+seed2 = 6239
+n_digits = 4
+n_iter = 10
+
+random_numbers = mid_product(seed1, seed2, n_digits, n_iter)
+output = f"Semillas: {seed1}, {seed2}, Dígitos: {n_digits}\\n{random_numbers}"
+output
+                    </code></pre>
+                    <div class="bg-black/50 text-white p-4 font-mono text-sm border-t border-gray-700">
+                        <p class="text-gray-400 mb-2">Salida:</p>
+                        <pre class="python-output">(Presiona "Ejecutar" para ver el resultado)</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Método del Multiplicador Constante -->
+            <div class="pt-4">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">3. Método del Multiplicador Constante</h4>
+                <p class="text-gray-700">Este método es similar a los anteriores, pero en lugar de multiplicar dos
+                    semillas, multiplica la semilla actual por una constante <strong>a</strong>.</p>
+                <ol class="list-decimal list-inside text-gray-700 mt-2 space-y-1">
+                    <li>Se elige una constante <strong>a</strong> y una semilla <strong>X₀</strong>, ambas de
+                        <strong>D</strong> dígitos.
+                    </li>
+                    <li>Se multiplica la constante <strong>a</strong> por la semilla <strong>X₀</strong>.</li>
+                    <li>Se extraen los <strong>D</strong> dígitos del centro del resultado para obtener
+                        <strong>X₁</strong>.
+                    </li>
+                    <li>El proceso se repite multiplicando <strong>a</strong> por <strong>X₁</strong> para obtener
+                        <strong>X₂</strong>, y así sucesivamente.
+                    </li>
+                </ol>
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Ejemplo en Python:</h5>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">ejemplo_multiplicador_constante.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                            <button onclick="runPythonCode(this)"
+                                class="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-3 rounded flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <span>Ejecutar</span>
+                            </button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">import sys
+                
+def constant_multiplier(seed, constant, n_digits, n_iter):
+    numbers = []
+    x = seed
+    for _ in range(n_iter):
+        product_str = str(constant * x).zfill(2 * n_digits)
+        mid_start = (len(product_str) - n_digits) // 2
+        x = int(product_str[mid_start : mid_start + n_digits])
+        numbers.append(x / (10**n_digits))
+    return numbers
+
+# Parámetros
+seed = 9803
+constant = 6965
+n_digits = 4
+n_iter = 10
+
+random_numbers = constant_multiplier(seed, constant, n_digits, n_iter)
+output = f"Semilla: {seed}, Constante: {constant}, Dígitos: {n_digits}\\n{random_numbers}"
+output
+                    </code></pre>
+                    <div class="bg-black/50 text-white p-4 font-mono text-sm border-t border-gray-700">
+                        <p class="text-gray-400 mb-2">Salida:</p>
+                        <pre class="python-output">(Presiona "Ejecutar" para ver el resultado)</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="semana4-template">
+        <div class="bg-white text-gray-800 p-6 rounded-lg shadow-inner">
+            <h3 class="text-2xl font-bold text-gray-900 mb-3">Pruebas Estadísticas de Independencia</h3>
+            <p class="text-gray-700">Una vez que hemos generado una secuencia de números pseudoaleatorios, es crucial
+                verificar si se comportan como una secuencia verdaderamente aleatoria e independiente. Las pruebas
+                estadísticas nos ayudan a evaluar la "calidad" de nuestros generadores. Si una secuencia no pasa estas
+                pruebas, no debería ser utilizada en una simulación seria.</p>
+            <p class="text-gray-700 mt-2">Aquí exploraremos dos pruebas fundamentales: la Prueba de Series y la Prueba
+                de Corridas.</p>
+
+            <!-- 1. Prueba de Series -->
+            <div class="pt-4">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">1. Prueba de Series</h4>
+                <p class="text-gray-700">La prueba de series se utiliza para verificar la uniformidad de pares de
+                    números sucesivos en la secuencia. La idea es dividir el cuadrado unitario (un plano de 1x1) en `m x
+                    m` casillas y contar cuántos pares `(ri, ri+1)` caen en cada casilla. Si los números son uniformes e
+                    independientes, esperaríamos que la cantidad de pares en cada casilla sea aproximadamente la misma.
+                </p>
+                <p class="text-gray-700 mt-2">Se utiliza la prueba de Chi-Cuadrado para comparar las frecuencias
+                    observadas (Oi) con las frecuencias esperadas (Ei).</p>
+                <div class="my-4 p-4 bg-gray-100 rounded-lg border border-gray-200 text-center">
+                    <p class="text-lg font-mono text-indigo-600">χ² = Σ [ (Oi - Ei)² / Ei ]</p>
+                </div>
+                <p class="text-gray-700">El estadístico calculado se compara con un valor crítico de la tabla
+                    Chi-Cuadrado. Si es menor, no se rechaza la hipótesis de independencia.</p>
+
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Ejemplo en Python (con carga de archivo):</h5>
+                <p class="text-gray-700 mb-2">Este código implementa la prueba de series. Para usarlo, crea un archivo
+                    `numeros.txt` con números aleatorios entre 0 y 1 separados por espacios o saltos de línea, y luego
+                    presiona "Ejecutar".</p>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">prueba_series.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                            <button onclick="runPythonCode(this)"
+                                class="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-3 rounded flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <span>Ejecutar</span>
+                            </button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">import numpy as np
+from scipy.stats import chi2
+
+def prueba_series(numeros, alpha=0.05, m=5):
+    n = len(numeros)
+    pares = [(numeros[i], numeros[i+1]) for i in range(n-1)]
+    Npares = len(pares)
+    casillas = m * m
+    esperada = Npares / casillas
+
+    obs = np.zeros((m, m), dtype=int)
+    for (x, y) in pares:
+        i = min(int(x * m), m-1)
+        j = min(int(y * m), m-1)
+        obs[i, j] += 1
+
+    O = obs.flatten()
+    chi2_stat = np.sum((O - esperada) ** 2 / esperada)
+    gl = casillas - 1
+    chi2_tabla = chi2.ppf(1 - alpha, gl)
+
+    conclusion = "✅ No se rechaza H0: Los números son independientes." if chi2_stat <= chi2_tabla else "❌ Se rechaza H0: Los números NO son independientes."
+
+    return f"Resultados de la Prueba de Series:\\n- Pares analizados: {Npares}\\n- Estadístico Chi-Cuadrado: {chi2_stat:.4f}\\n- Valor crítico (gl={gl}): {chi2_tabla:.4f}\\n- Conclusión: {conclusion}"
+
+# --- Simulación de carga de archivo ---
+try:
+    with open("numeros.txt", "r") as f:
+        datos = [float(x) for x in f.read().split()]
+    resultado = prueba_series(datos)
+except FileNotFoundError:
+    # Si el archivo no existe, lo creamos con datos de ejemplo
+    sample_data = " ".join([f"{np.random.rand():.5f}" for _ in range(50)])
+    with open("numeros.txt", "w") as f:
+        f.write(sample_data)
+    resultado = "No se encontró 'numeros.txt'. Se ha creado uno con 50 números aleatorios. Vuelve a ejecutar para probarlo."
+
+resultado
+</code></pre>
+                    <div class="bg-black/50 text-white p-4 font-mono text-sm border-t border-gray-700">
+                        <p class="text-gray-400 mb-2">Salida:</p>
+                        <pre class="python-output">(Presiona "Ejecutar" para ver el resultado)</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Prueba de Corridas Arriba y Abajo -->
+            <div class="pt-4">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">2. Prueba de Corridas Arriba y Abajo</h4>
+                <p class="text-gray-700">Esta prueba evalúa la independencia de los números en la secuencia analizando
+                    las "corridas", que son secuencias de números con una tendencia monótona (ascendente o descendente).
+                    Por ejemplo, en `0.1, 0.3, 0.8, 0.5, 0.2`, hay una corrida ascendente `(+, +)` y una corrida
+                    descendente `(-, -)`.</p>
+                <p class="text-gray-700 mt-2">Se calcula el número total de corridas observadas (Co) y se compara con el
+                    número de corridas esperadas (μ_Co) y su varianza (σ²_Co) para una secuencia verdaderamente
+                    aleatoria. Luego, se calcula un estadístico Z.</p>
+                <div class="my-4 p-4 bg-gray-100 rounded-lg border border-gray-200 text-center">
+                    <p class="text-lg font-mono text-indigo-600">Z = (Co - μ_Co) / σ_Co</p>
+                </div>
+                <p class="text-gray-700">Si el valor absoluto de Z es menor que un valor crítico (ej. 1.96 para un 95%
+                    de confianza), no se rechaza la hipótesis de independencia.</p>
+
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Ejemplo en Python:</h5>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">prueba_corridas.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                            <button onclick="runPythonCode(this)"
+                                class="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-3 rounded flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <span>Ejecutar</span>
+                            </button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">import numpy as np
+from scipy.stats import norm
+
+def prueba_corridas_arriba_abajo(numeros, alpha=0.05):
+    n = len(numeros)
+    if n < 2:
+        return "Se necesitan al menos 2 números."
+
+    # 1. Convertir secuencia a signos (+, -)
+    signos = []
+    for i in range(n - 1):
+        if numeros[i+1] > numeros[i]:
+            signos.append('+')
+        elif numeros[i+1] < numeros[i]:
+            signos.append('-')
+
+    # 2. Contar corridas observadas (Co)
+    Co = 1
+    for i in range(len(signos) - 1):
+        if signos[i] != signos[i+1]:
+            Co += 1
+
+    # 3. Calcular valores esperados
+    mu_Co = (2 * n - 1) / 3
+    sigma2_Co = (16 * n - 29) / 90
+
+    # 4. Calcular estadístico Z
+    Z = (Co - mu_Co) / np.sqrt(sigma2_Co)
+
+    # 5. Comparar con valor crítico
+    Z_critico = norm.ppf(1 - alpha / 2)
+    
+    conclusion = "✅ No se rechaza H0: Los números son independientes." if abs(Z) <= Z_critico else "❌ Se rechaza H0: Los números NO son independientes."
+
+    return f"Resultados de la Prueba de Corridas:\\n- Números analizados: {n}\\n- Corridas observadas: {Co}\\n- Estadístico Z: {Z:.4f}\\n- Valor crítico Z: {Z_critico:.4f}\\n- Conclusión: {conclusion}"
+
+# Datos de ejemplo
+datos = [0.87, 0.15, 0.23, 0.45, 0.69, 0.32, 0.30, 0.09, 0.12, 0.29, 0.58, 0.61, 0.73, 0.85, 0.99, 0.03, 0.18, 0.25, 0.36, 0.49]
+
+prueba_corridas_arriba_abajo(datos)
+</code></pre>
+                    <div class="bg-black/50 text-white p-4 font-mono text-sm border-t border-gray-700">
+                        <p class="text-gray-400 mb-2">Salida:</p>
+                        <pre class="python-output">(Presiona "Ejecutar" para ver el resultado)</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="semana5-template">
+        <div class="bg-white text-gray-800 p-6 rounded-lg shadow-inner">
+            <h3 class="text-2xl font-bold text-gray-900 mb-3">Pruebas de Uniformidad (Bondad de Ajuste)</h3>
+            <p class="text-gray-700">Además de la independencia, una propiedad fundamental de una buena secuencia de
+                números aleatorios `ri` es que deben estar distribuidos uniformemente en el intervalo [0, 1]. Las
+                pruebas de bondad de ajuste nos permiten verificar si los datos generados siguen una distribución
+                uniforme.</p>
+            <p class="text-gray-700 mt-2">Las dos pruebas más comunes para este propósito son la prueba Chi-Cuadrado y
+                la prueba de Kolmogorov-Smirnov.</p>
+
+            <!-- 1. Prueba Chi-Cuadrado -->
+            <div class="pt-4">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">1. Prueba Chi-Cuadrado (χ²)</h4>
+                <p class="text-gray-700">Esta prueba divide el intervalo [0, 1] en `k` subintervalos de igual tamaño.
+                    Luego, cuenta cuántos números de la secuencia caen en cada subintervalo (frecuencia observada, Oi).
+                    Si los números son uniformes, esperaríamos que en cada subintervalo caiga una cantidad similar de
+                    números (frecuencia esperada, Ei).</p>
+                <p class="text-gray-700 mt-2">La fórmula para el estadístico Chi-Cuadrado es:</p>
+                <div class="my-4 p-4 bg-gray-100 rounded-lg border border-gray-200 text-center">
+                    <p class="text-lg font-mono text-indigo-600">χ² = Σ [ (Oi - Ei)² / Ei ]</p>
+                </div>
+                <p class="text-gray-700">El valor calculado se compara con un valor crítico de la tabla Chi-Cuadrado con
+                    `k-1` grados de libertad. Si es menor, no se rechaza la hipótesis de que los datos siguen una
+                    distribución uniforme.</p>
+
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Ejemplo en Python:</h5>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">prueba_chi_cuadrado.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                            <button onclick="runPythonCode(this)"
+                                class="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-3 rounded flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <span>Ejecutar</span>
+                            </button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">import numpy as np
+from scipy.stats import chi2
+
+def prueba_chi_cuadrado(numeros, k=10, alpha=0.05):
+    n = len(numeros)
+    frec_observada, _ = np.histogram(numeros, bins=k, range=(0, 1))
+    frec_esperada = n / k
+
+    chi2_stat = np.sum((frec_observada - frec_esperada)**2 / frec_esperada)
+    gl = k - 1
+    chi2_critico = chi2.ppf(1 - alpha, gl)
+
+    conclusion = "✅ No se rechaza H0: Los datos siguen una distribución uniforme." if chi2_stat <= chi2_critico else "❌ Se rechaza H0: Los datos NO siguen una distribución uniforme."
+
+    return f"Resultados de la Prueba Chi-Cuadrado:\\n- Intervalos (k): {k}\\n- Frecuencia Esperada (Ei): {frec_esperada}\\n- Estadístico Chi-Cuadrado: {chi2_stat:.4f}\\n- Valor crítico (gl={gl}): {chi2_critico:.4f}\\n- Conclusión: {conclusion}"
+
+# Generamos 100 números aleatorios para la prueba
+datos_uniformes = np.random.rand(100)
+
+prueba_chi_cuadrado(datos_uniformes)
+</code></pre>
+                    <div class="bg-black/50 text-white p-4 font-mono text-sm border-t border-gray-700">
+                        <p class="text-gray-400 mb-2">Salida:</p>
+                        <pre class="python-output">(Presiona "Ejecutar" para ver el resultado)</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Prueba de Kolmogorov-Smirnov -->
+            <div class="pt-4">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">2. Prueba de Kolmogorov-Smirnov (K-S)</h4>
+                <p class="text-gray-700">Esta prueba compara la función de distribución acumulada empírica (F_emp(x)) de
+                    los datos con la función de distribución acumulada teórica (F_teo(x)) de la distribución uniforme.
+                    Para la distribución uniforme U(0,1), F_teo(x) = x.</p>
+                <p class="text-gray-700 mt-2">El estadístico de prueba `D` es la máxima diferencia absoluta entre estas
+                    dos funciones:</p>
+                <div class="my-4 p-4 bg-gray-100 rounded-lg border border-gray-200 text-center">
+                    <p class="text-lg font-mono text-indigo-600">D = max | F_emp(x) - F_teo(x) |</p>
+                </div>
+                <p class="text-gray-700">Este valor `D` se compara con un valor crítico de la tabla de K-S. Si `D` es
+                    menor que el valor crítico, no se rechaza la hipótesis de uniformidad. Esta prueba es generalmente
+                    más potente que la Chi-Cuadrado, especialmente para muestras pequeñas.</p>
+
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Ejemplo en Python:</h5>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">prueba_ks.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                            <button onclick="runPythonCode(this)"
+                                class="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-3 rounded flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <span>Ejecutar</span>
+                            </button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">import numpy as np
+from scipy.stats import kstest
+
+def prueba_kolmogorov_smirnov(numeros, alpha=0.05):
+    """
+    Realiza la prueba K-S para uniformidad U(0,1).
+    Scipy.stats.kstest devuelve el estadístico D y el p-valor.
+    """
+    n = len(numeros)
+    # 'uniform' le dice a kstest que compare contra la distribución uniforme estándar
+    D_stat, p_valor = kstest(numeros, 'uniform')
+
+    # En una prueba de hipótesis, si p-valor < alpha, se rechaza H0.
+    conclusion = f"✅ No se rechaza H0 (p-valor={p_valor:.4f} >= {alpha}): Los datos siguen una distribución uniforme."
+    if p_valor < alpha:
+        conclusion = f"❌ Se rechaza H0 (p-valor={p_valor:.4f} < {alpha}): Los datos NO siguen una distribución uniforme."
+
+    # El valor crítico no es devuelto directamente, pero se puede inferir del p-valor.
+    # Para fines educativos, nos enfocamos en el p-valor que es más estándar en software.
+
+    return f"Resultados de la Prueba Kolmogorov-Smirnov:\\n- Números analizados: {n}\\n- Estadístico D: {D_stat:.4f}\\n- P-valor: {p_valor:.4f}\\n- Nivel de significancia (alpha): {alpha}\\n- Conclusión: {conclusion}"
+
+# Generamos 50 números aleatorios para la prueba
+datos_uniformes = np.random.rand(50)
+
+prueba_kolmogorov_smirnov(datos_uniformes)
+</code></pre>
+                    <div class="bg-black/50 text-white p-4 font-mono text-sm border-t border-gray-700">
+                        <p class="text-gray-400 mb-2">Salida:</p>
+                        <pre class="python-output">(Presiona "Ejecutar" para ver el resultado)</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="semana6-template">
+        <div class="bg-white text-gray-800 p-6 rounded-lg shadow-inner">
+            <h3 class="text-2xl font-bold text-gray-900 mb-3">Generación de Variables Aleatorias</h3>
+            <p class="text-gray-700">Una vez que tenemos una fuente fiable de números pseudoaleatorios uniformes U(0,1),
+                el siguiente paso es transformarlos para generar variables que sigan otras distribuciones de
+                probabilidad, tanto continuas (Exponencial, Normal) como discretas (Bernoulli, Binomial). Esto es
+                fundamental para simular sistemas del mundo real.</p>
+
+            <!-- 1. Generación de Variables Continuas -->
+            <div class="pt-4">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">1. Generación de Variables Aleatorias Continuas
+                </h4>
+                <h5 class="text-lg font-semibold text-gray-800 mt-4 mb-2">1.1. Método de la Transformada Inversa</h5>
+                <p class="text-gray-700">Este método es uno de los más fundamentales y se puede aplicar a cualquier
+                    distribución cuya función de distribución acumulada (FDA), F(x), sea invertible. El procedimiento
+                    es:</p>
+                <ol class="list-decimal list-inside text-gray-700 mt-2 space-y-1">
+                    <li>Obtener la función de distribución acumulada F(x) de la variable aleatoria que se desea generar.
+                    </li>
+                    <li>Igualar F(x) a un número aleatorio `r` (donde `r` ~ U(0,1)): `r = F(x)`.</li>
+                    <li>Despejar `x` de la ecuación para obtener la transformada inversa: `x = F⁻¹(r)`.</li>
+                    <li>Generar números `ri` ~ U(0,1) y aplicar la fórmula `xi = F⁻¹(ri)` para obtener los números `xi`
+                        con la distribución deseada.</li>
+                </ol>
+                <p class="text-gray-700 mt-2"><strong>Ejemplo (Distribución Exponencial):</strong> La FDA es `F(x) = 1 -
+                    e^(-λx)`. La inversa es `x = -ln(1-r)/λ`. Como `1-r` también es U(0,1), podemos simplificar a `x =
+                    -ln(r)/λ`.</p>
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Ejemplo en Python (Distribución Exponencial):</h5>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">generador_exponencial.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg></button>
+                            <button onclick="runPythonCode(this)"
+                                class="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-3 rounded flex items-center gap-1"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z"></path>
+                                </svg> <span>Ejecutar</span></button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">import numpy as np
+
+def generar_exponencial(lmbda, n):
+    # Generar n números uniformes U(0,1)
+    uniformes = np.random.rand(n)
+    # Aplicar la transformada inversa para la exponencial
+    exponenciales = -np.log(1 - uniformes) / lmbda
+    return exponenciales
+
+# Parámetros
+tasa_lambda = 0.5 # Por ejemplo, 0.5 eventos por unidad de tiempo
+cantidad = 5
+
+datos_exp = generar_exponencial(tasa_lambda, cantidad)
+f"Primeros {cantidad} valores generados con lambda={tasa_lambda}:\\n{np.round(datos_exp, 4)}"
+</code></pre>
+                    <div class="bg-black/50 text-white p-4 font-mono text-sm border-t border-gray-700">
+                        <p class="text-gray-400 mb-2">Salida:</p>
+                        <pre class="python-output">(Presiona "Ejecutar" para ver el resultado)</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-4">
+                <h5 class="text-lg font-semibold text-gray-800 mt-4 mb-2">1.2. Método de Box-Muller (para Distribución
+                    Normal)</h5>
+                <p class="text-gray-700">La distribución normal es crucial en estadística, pero su FDA no tiene una
+                    inversa analítica simple. El método de Box-Muller es una técnica ingeniosa que genera un par de
+                    variables normales estándar (Z₁, Z₂) independientes a partir de un par de variables uniformes (U₁,
+                    U₂) independientes.</p>
+                <div class="my-4 p-4 bg-gray-100 rounded-lg border border-gray-200 space-y-2 text-center">
+                    <p class="text-lg font-mono text-indigo-600">Z₁ = sqrt(-2 * ln(U₁)) * cos(2 * π * U₂)</p>
+                    <p class="text-lg font-mono text-indigo-600">Z₂ = sqrt(-2 * ln(U₁)) * sin(2 * π * U₂)</p>
+                </div>
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Ejemplo en Python (usando Cuadrados Medios como base):
+                </h5>
+                <p class="text-gray-700 mb-2">El siguiente código encapsula en una clase la generación de números
+                    normales. Primero, implementa un generador U(0,1) con el método de cuadrados medios y luego lo usa
+                    como base para el método de Box-Muller. <strong>Nota:</strong> Este código no es ejecutable en el
+                    navegador porque intenta guardar archivos en el disco.</p>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">generador_normal.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg></button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">import matplotlib.pyplot as plt
+import math
+
+class Aleatorio:
+    def __init__(self, x0, n, d=4):
+        """
+        x0 : semilla (entero)
+        n  : cantidad de números normales a generar
+        d  : cantidad de dígitos de precisión del generador base
+        """
+        self.x0 = x0
+        self.n = n
+        self.d = d
+
+    def cuadrados_medios(self, cantidad):
+        """Genera números pseudoaleatorios U(0,1) mediante cuadrados medios."""
+        numeros = []
+        x = self.x0
+        for _ in range(cantidad):
+            x_cuadrado = str(x**2).zfill(2*self.d)
+            inicio = (len(x_cuadrado) - self.d) // 2
+            x = int(x_cuadrado[inicio:inicio+self.d])
+            numeros.append(x / (10**self.d))
+        return numeros
+
+    def generar_normal(self):
+        """Genera números con distribución normal usando Box–Muller."""
+        uniformes = self.cuadrados_medios(2 * self.n)
+        normales = []
+
+        for i in range(0, len(uniformes), 2):
+            u1, u2 = uniformes[i], uniformes[i+1]
+            if u1 == 0:  # evitar log(0)
+                u1 = 1e-10
+            z1 = math.sqrt(-2 * math.log(u1)) * math.cos(2 * math.pi * u2)
+            z2 = math.sqrt(-2 * math.log(u1)) * math.sin(2 * math.pi * u2)
+            normales.append(z1)
+            if len(normales) < self.n:
+                normales.append(z2)
+        return normales
+
+# ===== Ejecución (valores fijos, sin input) =====
+semilla = 5735       # semilla inicial
+cantidad = 1000      # cantidad de números normales
+generador = Aleatorio(semilla, cantidad)
+
+datos = generador.generar_normal()
+
+print("Generación completada.")
+print(f"Se generaron {len(datos)} números.")
+print("Primeros 5 valores generados:", datos[:5])
+</code></pre>
+                </div>
+            </div>
+
+            <!-- 2. Generación de Variables Discretas -->
+            <div class="pt-6">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">2. Generación de Variables Aleatorias Discretas
+                </h4>
+                <p class="text-gray-700">La generación de variables discretas también se basa en números uniformes `r` ~
+                    U(0,1). La idea es mapear subintervalos de [0, 1] a los posibles valores de la variable discreta,
+                    donde el tamaño de cada subintervalo es igual a la probabilidad de ese valor.</p>
+
+                <h5 class="text-lg font-semibold text-gray-800 mt-4 mb-2">2.1. Distribución de Bernoulli</h5>
+                <p class="text-gray-700">Una variable de Bernoulli solo tiene dos resultados: "éxito" (1) con
+                    probabilidad `p`, y "fracaso" (0) con probabilidad `1-p`. Para generarla:</p>
+                <ol class="list-decimal list-inside text-gray-700 mt-2 space-y-1">
+                    <li>Genera un número aleatorio `r` ~ U(0,1).</li>
+                    <li>Si `r < p`, el resultado es 1 (éxito).</li>
+                    <li>Si no, el resultado es 0 (fracaso).</li>
+                </ol>
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Ejemplo en Python (Bernoulli):</h5>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">generador_bernoulli.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg></button>
+                            <button onclick="runPythonCode(this)"
+                                class="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-3 rounded flex items-center gap-1"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z"></path>
+                                </svg> <span>Ejecutar</span></button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">import numpy as np
+
+def generar_bernoulli(p, n):
+    # Generar n números uniformes
+    uniformes = np.random.rand(n)
+    # Aplicar la condición de Bernoulli
+    bernoulli_vars = [1 if r < p else 0 for r in uniformes]
+    return bernoulli_vars
+
+# Parámetros
+prob_exito = 0.7  # 70% de probabilidad de éxito
+cantidad = 10
+
+datos_bern = generar_bernoulli(prob_exito, cantidad)
+f"Generando {cantidad} variables de Bernoulli con p={prob_exito}:\\n{datos_bern}"
+</code></pre>
+                    <div class="bg-black/50 text-white p-4 font-mono text-sm border-t border-gray-700">
+                        <p class="text-gray-400 mb-2">Salida:</p>
+                        <pre class="python-output">(Presiona "Ejecutar" para ver el resultado)</pre>
+                    </div>
+                </div>
+
+                <h5 class="text-lg font-semibold text-gray-800 mt-6 mb-2">2.2. Distribución Binomial</h5>
+                <p class="text-gray-700">Una variable Binomial B(n, p) representa el número de éxitos en `n` ensayos de
+                    Bernoulli independientes, cada uno con probabilidad de éxito `p`. La forma más directa de simularla
+                    es:</p>
+                <ol class="list-decimal list-inside text-gray-700 mt-2 space-y-1">
+                    <li>Realizar `n` simulaciones de Bernoulli con probabilidad `p`.</li>
+                    <li>Sumar el número de éxitos (los "1") obtenidos. El total es un valor de la distribución binomial.
+                    </li>
+                </ol>
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Ejemplo en Python (Binomial):</h5>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">generador_binomial.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg></button>
+                            <button onclick="runPythonCode(this)"
+                                class="bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-1 px-3 rounded flex items-center gap-1"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z"></path>
+                                </svg> <span>Ejecutar</span></button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">import numpy as np
+
+def generar_binomial_una_vez(n_ensayos, p_exito):
+    """Genera un único valor de una distribución Binomial."""
+    uniformes = np.random.rand(n_ensayos)
+    exitos = np.sum([1 for r in uniformes if r < p_exito])
+    return exitos
+
+def generar_binomial_multiples(M, n_ensayos, p_exito):
+    """Genera M valores de una distribución Binomial."""
+    return [generar_binomial_una_vez(n_ensayos, p_exito) for _ in range(M)]
+
+# Parámetros
+n = 10      # Número de ensayos (ej. lanzar una moneda 10 veces)
+p = 0.5     # Probabilidad de éxito (ej. cara)
+M = 5       # Cuántos valores binomiales generar
+
+valores_binomiales = generar_binomial_multiples(M, n, p)
+f"Generando {M} valores de una Binomial(n={n}, p={p}):\\n{valores_binomiales}"
+</code></pre>
+                    <div class="bg-black/50 text-white p-4 font-mono text-sm border-t border-gray-700">
+                        <p class="text-gray-400 mb-2">Salida:</p>
+                        <pre class="python-output">(Presiona "Ejecutar" para ver el resultado)</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="semana7-template">
+        <div class="bg-white text-gray-800 p-6 rounded-lg shadow-inner">
+            <h3 class="text-2xl font-bold text-gray-900 mb-3">Diseño de Simulaciones Monte Carlo</h3>
+            <p class="text-gray-700">La simulación de Monte Carlo es una poderosa técnica computacional que utiliza el
+                muestreo aleatorio repetido para obtener resultados numéricos. En esencia, se trata de resolver
+                problemas (que pueden ser determinísticos) a través de la aleatoriedad. Es una de las herramientas más
+                flexibles en la estadística computacional y la ciencia de datos.</p>
+            <p class="text-gray-700 mt-2">El proceso general de una simulación Monte Carlo es:</p>
+            <ol class="list-decimal list-inside text-gray-700 mt-2 space-y-1">
+                <li><strong>Definir el dominio de las entradas:</strong> Identificar las variables aleatorias del
+                    sistema y sus distribuciones de probabilidad.</li>
+                <li><strong>Generar entradas aleatorias:</strong> Muestrear repetidamente de las distribuciones de
+                    probabilidad definidas.</li>
+                <li><strong>Realizar una simulación determinista:</strong> Para cada conjunto de entradas aleatorias,
+                    ejecutar el modelo del sistema y registrar el resultado.</li>
+                <li><strong>Agregar los resultados:</strong> Analizar los resultados de todas las simulaciones para
+                    estimar la cantidad de interés (ej. una probabilidad, un promedio, una varianza).</li>
+            </ol>
+            <p class="text-gray-700 mt-2">A continuación, se presentan dos ejemplos complejos que ilustran cómo diseñar
+                estas simulaciones para estimar probabilidades y parámetros.</p>
+
+            <!-- 1. Ejemplo 1: Estimación de Probabilidad de Colisiones -->
+            <div class="pt-4">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">Ejemplo 1: Estimación de Probabilidad de Colisiones
+                    en una Red</h4>
+                <p class="text-gray-700"><strong>Problema:</strong> Imagina una red de `N` sensores inalámbricos. Cada
+                    sensor intenta transmitir un paquete en un momento aleatorio `t`, donde `t` es un número U(0,1). Se
+                    produce una colisión si dos sensores cualesquiera intentan transmitir con una diferencia de tiempo
+                    menor que un umbral `δ` (delta). El objetivo es estimar la probabilidad de que ocurra al menos una
+                    colisión.</p>
+                <p class="text-gray-700 mt-2"><strong>Diseño de la simulación:</strong></p>
+                <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                    <li>Una simulación (un "experimento") consiste en generar `N` tiempos aleatorios U(0,1).</li>
+                    <li>Se comprueba si en esa lista de tiempos hay algún par cuya diferencia sea menor que `δ`. Si lo
+                        hay, la simulación es un "éxito" (hubo colisión).</li>
+                    <li>Se repite este experimento `M` veces (por ejemplo, 100,000 veces).</li>
+                    <li>La probabilidad estimada de colisión es `(Número de éxitos) / M`.</li>
+                </ul>
+
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Implementación en Python (con interfaz gráfica
+                    Tkinter):</h5>
+                <p class="text-gray-700 mb-2">El siguiente código implementa esta simulación en una aplicación de
+                    escritorio completa. Permite al usuario configurar `N`, `δ` y `M`, y visualiza los resultados,
+                    incluyendo la convergencia de la probabilidad. <strong>Nota:</strong> Este código no es ejecutable
+                    en el navegador, ya que utiliza la librería `tkinter` para crear una interfaz gráfica.</p>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">monte_carlo_colisiones.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg></button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">import threading
+import math
+import random
+import tkinter as tk
+# ... (El resto del código de monte_carlo_collision.py) ...
+
+def check_collision(times, delta):
+    """Verifica si hay una colisión en una lista de tiempos de transmisión."""
+    sorted_times = sorted(times)
+    for i in range(len(sorted_times) - 1):
+        if (sorted_times[i + 1] - sorted_times[i]) < delta:
+            return True
+    return False
+
+def run_simulation_batch(N, delta, batch_size):
+    """Ejecuta un lote de simulaciones y devuelve el número de colisiones."""
+    collisions = 0
+    for _ in range(batch_size):
+        times = [random.random() for _ in range(N)]
+        if check_collision(times, delta):
+            collisions += 1
+    return collisions
+
+# En una aplicación real, se llamaría a run_simulation_batch repetidamente
+# para alcanzar el total de M simulaciones, actualizando la UI en el proceso.
+
+# Ejemplo de uso de la lógica central:
+N = 10
+delta = 0.05
+M = 100000
+
+total_collisions = 0
+num_batches = 100
+batch_size = M // num_batches
+
+for _ in range(num_batches):
+    total_collisions += run_simulation_batch(N, delta, batch_size)
+
+prob_estimada = total_collisions / M
+
+print(f"Simulación Monte Carlo para colisiones:")
+print(f"Parámetros: N={N}, delta={delta}, M={M}")
+print(f"Colisiones encontradas: {total_collisions}")
+print(f"Probabilidad estimada de colisión: {prob_estimada:.4%}")
+</code></pre>
+                </div>
+            </div>
+
+            <!-- 2. Ejemplo 2: Robot Recolector -->
+            <div class="pt-6">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">Ejemplo 2: Estimación de Parámetros de un Robot
+                    Recolector</h4>
+                <p class="text-gray-700"><strong>Problema:</strong> Un robot se mueve en una cuadrícula de `n x n`. Cada
+                    celda tiene una probabilidad `p` de contener un objeto. El robot comienza en una celda aleatoria y
+                    realiza un máximo de `max_movimientos` a celdas adyacentes no visitadas. Queremos estimar la
+                    probabilidad de que el robot recolecte al menos `k` objetos.</p>
+                <p class="text-gray-700 mt-2"><strong>Diseño de la simulación:</strong></p>
+                <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                    <li>Una simulación consiste en:
+                        <ol class="list-decimal list-inside ml-4">
+                            <li>Generar una nueva cuadrícula aleatoria según la probabilidad `p`.</li>
+                            <li>Colocar el robot en una posición inicial aleatoria.</li>
+                            <li>Simular su trayectoria de `max_movimientos`, contando los objetos recolectados.</li>
+                        </ol>
+                    </li>
+                    <li>Si el número de objetos recolectados es `>= k`, la simulación es un "éxito".</li>
+                    <li>Se repite este proceso `M` veces.</li>
+                    <li>La probabilidad estimada es `(Número de éxitos) / M`. Además, se pueden calcular otros
+                        parámetros como el error estándar y un intervalo de confianza para la estimación.</li>
+                </ul>
+
+                <h5 class="font-semibold text-gray-800 mt-4 mb-2">Implementación en Python (Script de consola):</h5>
+                <p class="text-gray-700 mb-2">El siguiente script de Python implementa esta simulación. Está diseñado
+                    para ser ejecutado desde la línea de comandos, permitiendo configurar todos los parámetros.
+                    <strong>Nota:</strong> Este código no es ejecutable directamente en el navegador.
+                </p>
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <div class="bg-gray-700 text-white text-sm px-4 py-2 font-mono flex justify-between items-center">
+                        <span class="text-gray-300">monte_carlo_robot.py</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="copyCode(this)" title="Copiar código"
+                                class="p-1 text-gray-300 hover:text-white transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg></button>
+                        </div>
+                    </div>
+                    <pre class="p-4 overflow-x-auto"><code class="language-python">import random
+import numpy as np
+from math import sqrt
+
+def simular_una_trayectoria(n=10, p=0.1, max_movimientos=20):
+    """Simula una única trayectoria del robot y devuelve los objetos recolectados."""
+    grid = np.random.rand(n, n) < p
+    start = (random.randrange(n), random.randrange(n))
+    visited = {start}
+    objetos = int(grid[start])
+    pos = start
+    
+    for _ in range(max_movimientos):
+        # ... (lógica de movimiento a vecinos no visitados) ...
+        # (código completo en el archivo original)
+        # Simplificación para el ejemplo:
+        i, j = pos
+        vecinos_posibles = []
+        if i > 0 and (i-1, j) not in visited: vecinos_posibles.append((i-1, j))
+        if i < n-1 and (i+1, j) not in visited: vecinos_posibles.append((i+1, j))
+        if j > 0 and (i, j-1) not in visited: vecinos_posibles.append((i, j-1))
+        if j < n-1 and (i, j+1) not in visited: vecinos_posibles.append((i, j+1))
+        
+        if not vecinos_posibles:
+            break
+        pos = random.choice(vecinos_posibles)
+        visited.add(pos)
+        objetos += int(grid[pos])
+        
+    return objetos
+
+def monte_carlo(M=10000, n=10, p=0.1, max_movimientos=20, objetivo=5):
+    """Ejecuta M simulaciones Monte Carlo."""
+    contador_exito = 0
+    for _ in range(M):
+        objetos = simular_una_trayectoria(n, p, max_movimientos)
+        if objetos >= objetivo:
+            contador_exito += 1
+            
+    prob_hat = contador_exito / M
+    se = sqrt(prob_hat * (1 - prob_hat) / M)
+    
+    print(f"Simulación Monte Carlo para robot recolector:")
+    print(f"Parámetros: n={n}, p={p}, movimientos={max_movimientos}, objetivo>={objetivo}, M={M}")
+    print(f"Éxitos: {contador_exito}")
+    print(f"Probabilidad estimada: {prob_hat:.4%}")
+    print(f"Error Estándar (SE): {se:.6f}")
+
+# Ejecución del ejemplo
+monte_carlo()
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Botón Flotante y Panel del Editor de Python -->
+    <div id="python-runner-container" class="fixed bottom-6 right-6 z-50 flex items-center gap-4">
+        <!-- Tooltip para el botón -->
+        <div id="runner-tooltip"
+            class="hidden opacity-0 bg-gray-800 text-white text-sm px-4 py-2 rounded-lg shadow-lg transition-opacity duration-300">
+            ¡Prueba tu código aquí!
+        </div>
+        <!-- Botón flotante para abrir el editor -->
+        <button id="open-python-editor-btn"
+            class="bg-gradient-to-br from-blue-500 to-purple-600 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center transform hover:scale-110 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+        </button>
+
+        <!-- Panel del editor (inicialmente oculto) -->
+        <div id="python-editor-panel"
+            class="hidden fixed bottom-24 right-6 w-[90vw] max-w-xl h-[70vh] bg-gray-900/80 backdrop-blur-lg rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-white/20">
+            <div class="flex items-center justify-between p-4 bg-gray-800/50 border-b border-white/10">
+                <h3 class="text-white font-semibold flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                    Python Playground
+                </h3>
+                <button id="close-python-editor-btn" aria-label="Cerrar editor de Python"
+                    class="text-white/50 hover:text-white text-2xl font-bold">&times;</button>
+            </div>
+            <div class="flex-grow flex flex-col min-h-0">
+                <div class="flex-1 min-h-0">
+                    <textarea id="python-code-input"
+                        class="w-full h-full p-4 bg-transparent text-white font-mono text-sm resize-none focus:outline-none"
+                        placeholder="Escribe tu código Python aquí..."></textarea>
+                </div>
+                <div class="flex-shrink-0 h-1/3 border-t border-white/10 flex flex-col">
+                    <div class="p-3 bg-gray-800/30 flex justify-between items-center">
+                        <h4 class="text-sm font-semibold text-gray-300">Salida de la Consola</h4>
+                        <button id="speak-output-btn" data-speak-target="custom-python-output"
+                            title="Leer resultado en voz alta"
+                            class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full flex items-center justify-center gap-1 speak-btn">
+                            <!-- Icono Play -->
+                            <svg class="h-4 w-4 speak-icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                            </svg>
+                            <!-- Icono Pause -->
+                            <svg class="h-4 w-4 speak-icon-pause hidden" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M5.75 4.5a.75.75 0 00-.75.75v10.5a.75.75 0 001.5 0V5.25a.75.75 0 00-.75-.75zM14.25 4.5a.75.75 0 00-.75.75v10.5a.75.75 0 001.5 0V5.25a.75.75 0 00-.75-.75z" />
+                            </svg>
+                            <!-- Icono Stop -->
+                            <svg class="h-4 w-4 speak-icon-stop hidden" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M5.25 5.25A.75.75 0 004.5 6v8a.75.75 0 001.5 0V6A.75.75 0 005.25 5.25zM14.75 5.25a.75.75 0 00-.75.75v8a.75.75 0 001.5 0V6a.75.75 0 00-.75-.75z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <pre id="custom-python-output"
+                        class="text-sm text-gray-300 font-mono flex-grow overflow-auto p-4 whitespace-pre-wrap">(La salida aparecerá aquí)</pre>
+                </div>
+            </div>
+            <div class="p-3 bg-gray-800/50 border-t border-white/10">
+                <button id="run-custom-python-btn"
+                    class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Ejecutar Código
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8 mt-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Universidad Nacional del Altiplano</h3>
+                    <p class="text-purple-100 text-sm">
+                        Escuela Profesional de Ingeniería Estadística e Informática
+                    </p>
+                    <p class="text-purple-100 text-sm mt-2">
+                        Ciudad Universitaria - Puno, Perú
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Contacto</h3>
+                    <p class="text-purple-100 text-sm">📞 +51 930 155 890</p>
+                    <p class="text-purple-100 text-sm">📧 vidmanmamani@gmail.com</p>
+                    <p class="text-purple-100 text-sm">🌐 www.unap.edu.pe</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Síguenos</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://web.facebook.com/VidmanRS" aria-label="Facebook"
+                            class="bg-white bg-opacity-20 p-2 rounded-full hover:bg-opacity-30 transition-colors">📘</a>
+                        <a href="https://www.instagram.com/vidman_rs/" aria-label="Instagram"
+                            class="bg-white bg-opacity-20 p-2 rounded-full hover:bg-opacity-30 transition-colors">📷</a>
+                        <a href="#" aria-label="Twitter"
+                            class="bg-white bg-opacity-20 p-2 rounded-full hover:bg-opacity-30 transition-colors">🐦</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-purple-300 mt-8 pt-6 text-center">
+                <p class="text-purple-100 text-sm">
+                    © 2024 Universidad Nacional del Altiplano - Puno. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
